@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>how to use output element</title>
+		<link href="./css4.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<form id="frmTmp">
+			<fieldset>
+				<legend>Pls input two number</legend>
+				<input id="txtNum_1" type="text" class="inputtxt" />
+				*
+				<input id="txtNum_2" type="text" class="inputtxt" />
+				<output onFormInput="value=txtNum1.value * txtNum2.value"></output>
+				<!-- Jedi:Can't run in the Chrome and Firefox -->
+			</fieldset>
+		</form>
+	</body>
+</html>

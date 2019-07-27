@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overview</title>
+    <script src="../lib/vue.js"></script>
+    <link href="../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- 这是我们的View -->
+    <div id="example-1">
+        Hello {{name}}
+    </div>
+
+    <script>
+
+        // Jedi: 用文字表示表示http://v1-cn.vuejs.org/images/mvvm.png
+        // Jedi: 这个地方是精髓
+        //   Step 1: View[DOM] -> ViewModel[DOM Listeners] -> Model[Plain js object]
+        //   Step 2: Model[Plain js object] -> ViewModel[Data Bindings] -> View[DOM]
+
+        // 这是我们的Model
+        var exampleData = {
+            name: 'Vue.js'
+        }
+
+        // 创建一个Vue实例或"ViewModel"
+        // 它连接View与Model
+        new Vue({
+            el: '#example-1',
+            data: exampleData
+        })
+
+    </script>
+</body>
+</html>

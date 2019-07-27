@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo0103-购物车</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-controller="CartController">
+    <div class="container">
+        <header>
+            <h1>Your Order</h1>
+        </header>
+        <section>
+           <!--item in items类似C#中的迭代器，即类似于 [ for (var item in items) {...} ]-->
+           <!--item是迭代器的当前变量，items是要迭代的容器-->
+            <div ng-repeat="item in items">
+                <span>{{item.title}}</span>
+                <input ng-model="items.quantity"/>
+                <span>{{item.price | currency}}</span>
+                <span>{{item.price * elt.quantity | currency}}</span>
+                <button class="btn-secondary" ng-click="remove($index)">Remove</button>
+            </div>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

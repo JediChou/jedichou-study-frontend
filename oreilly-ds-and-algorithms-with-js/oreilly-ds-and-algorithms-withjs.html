@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>OReiily, Data Structures & Algorithms with JavaScript</title>
+		<link rel="stylesheet" href="lib/jasmine-2.2.0/jasmine.css">
+		<script type="text/javascript" src="lib/jasmine-2.2.0/jasmine.js"></script>
+		<script type="text/javascript" src="lib/jasmine-2.2.0/jasmine-html.js"></script>
+		<script type="text/javascript" src="lib/jasmine-2.2.0/boot.js"></script>
+	</head>
+	<body>
+		<!-- 
+			Description: a load function
+			Thanks for jb51.net
+			Url: http://www.jb51.net/article/10583.htm
+		-->
+		<script type="text/javascript">
+		function load(path, reload)   
+		{   
+			var scripts = document.getElementsByTagName("script");   
+			if (!reload)   
+			for (var i = 0; i < scripts.length; i++)   
+				if (scripts[i].src && scripts[i].src.toLowerCase() == path.toLowerCase() ) return;   
+			var sobj = document.createElement('script');   
+			sobj.type = "text/javascript";   
+			sobj.src = path;   
+			var headobj = document.getElementsByTagName('head')[0];   
+			headobj.appendChild(sobj);   
+		}
+		</script>
+	
+		<!-- load test suite-->
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch1.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch2.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch3.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch4.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch5.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch6.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch7.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch8.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch9.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch10.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch11.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch12.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch13.js"></script>
+		<script type="text/javascript" src="oreilly-ds-and-algorithms-withjs-ch14.js"></script>
+		<script type="text/javascript" src="simple-test-for-load.js"></script>
+	</body>
+</html>

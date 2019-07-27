@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>json filters of Vue.js</title>
+    <link href="../../../css/site.css" rel="stylesheet" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <article>
+            <header>JavaScript Books</header>
+            <ul>
+                <!-- 可以用来在页面上显示转换后的json对象 -->
+                <li v-for="book in books">
+                    {{book | json}}
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            {{books | json}}
+        </article>
+    </div>
+    <script>
+        var model = {
+            books: [
+                {name:'JavaScript高级程序设计', price:78.20},
+                {name:'JavaScript权威指南', price:109.80},
+                {name:'JavaScript DOM编程艺术', price: 38.70},
+                {name:'JavaScript语言精粹', price:38.70},
+                {name:'Web设计与前端开发秘籍:HTML CSS', price:110.20}
+            ]
+        };
+        var vm = new Vue({
+            el: '#app',
+            data: model
+        });
+    </script>
+</body>
+</html>

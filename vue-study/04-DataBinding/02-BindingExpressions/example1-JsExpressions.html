@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js - Binding JavaScript Expressions</title>
+    <script src="../../lib/vue.js"></script>
+    <link href="../../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- View -->
+    <div id="app">
+        <h1>Binding JavaScript Expressions</h1>
+        <ul>
+            <li>"number + 1": {{number + 1}}</li>
+            <li>"ok": {{ok ? 'YES':'NO'}}</li>
+            <li>"message": {{message.split('').reverse().join('')}}</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // Model
+        var data = {
+            number: 100,
+            ok: true,
+            message: 'Sarah, Xin'
+        };
+
+        // ViewModel
+        new Vue({
+            el: '#app',
+            data: data
+        });
+
+    </script>
+
+</body>
+</html>

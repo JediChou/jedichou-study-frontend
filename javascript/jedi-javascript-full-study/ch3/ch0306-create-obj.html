@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Create Javascript object</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function company(name, city, createDate, url) {
+                this.name = name;
+                this.city = city;
+                this.createDate = new Date(createDate);
+                this.url = url;
+            }
+
+            function showCompany() {
+                for(var prop in this) {
+                    alert(prop += "+this[prop]"+"");
+                }
+            }
+
+            showCompany('simple-code', 'shenzhen', '2015-4-20', 'www.simple-code.me');
+        </script>
+    </body>
+</html>

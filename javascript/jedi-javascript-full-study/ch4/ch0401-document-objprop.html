@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>property of document object</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            function t(name, obj) {
+                document.write("document." + name + ":[" + eval(obj) + "]<br/>");
+            }
+
+            var colors = function() {
+                t('alinkColor', 'document.alinkColor');
+                t('linkColor', 'document.linkColor');
+                t('vlinkColor', 'document.vlinkColor');
+            }
+
+            // how to change this bgColor or fgColor ?
+            var background_color = function() {
+                document.bgColor = "#ff0000"; t('bgColor', 'document.bgColor');
+                document.fgColor = "#0000ff"; t('fgColor', 'document.fgColor');
+                document.bgColor = "ffffff";
+                document.fgColor = "000000";
+            }
+
+            // how to change cookie
+            var set_cookie = function() {
+                document.cookie = "user=jedi";
+                document.cookie = "pass=abcd";
+                t('cookie', 'document.cookie');
+            }
+
+            var domain = function() {
+                t('domain', 'document.domain');
+            }
+
+            var lastModify = function() {
+                t('lastmodify', 'document.lastModified')
+            }
+
+            var referrer = function() {
+                t('referrer', 'document.referrer');
+            }
+
+            var title = function() {
+                t('title', 'document.title')
+            }
+
+            var url = function() {
+                t('url', 'document.URL')
+            }
+
+            var close = function() {
+                t('close', 'document.close');
+            }
+
+            new colors; new background_color; new set_cookie; new domain;
+            new lastModify; new referrer; new title; new url; new close;
+        </script>
+    </body>
+</html>

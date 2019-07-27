@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>0301-How to I set my text to display in a certain font?</title>
+        <style>
+            p { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; }
+            h1 { font-family: "Courier New", "Andale Mono", monospace; }
+            
+            /*
+               <Advices>
+               Windows: Arial, Lucida, Impact, Times New Roman, Courier New, Tahoma, Comic Sans, Verdana, Georgia, Garamond
+               Mac: Helvetica, Futura, Bodoni, Times, Palatino, Courier, Gill Sans, Geneva, Baskerville, Andale Mono
+             */
+        </style>
+    </head>
+    <body>
+        <h1>How to I set my text to display in a certain font?</h1>
+        <p>
+            Here, we've specified that if Verdana is installed on the system, it should be used;
+            otherwise, the browser is instructed to see if Geneva is installed; failling that, the
+            computer will look for Arial, then Helvetica. If none of these fonts are available,
+            the browser will then use that system's default sans-serif font.
+        </p>
+    </body>
+</html>

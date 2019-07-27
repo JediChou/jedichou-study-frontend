@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>pattern property of input element</title>
+		<link href="./css4.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<form id="frmTmp">
+			<fieldset>
+				<legend>pattern property:</legend>
+				<p>
+					Pls input your name:
+					<input name="txtName" type="text" class="inputtxt" pattern="^[a-zA-Z]\w{5,7}$">
+					<input name="frmSubmit" type="submit" class="inputbtn" value="submit">
+				</p>
+				<p class="p_color">
+					Length: 6-8, Character first(include character and number, underline).
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

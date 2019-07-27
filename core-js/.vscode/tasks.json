@@ -1,0 +1,8 @@
+{
+    // run current file
+    "version": "0.1.0",
+    "command": "C:/Program Files (x86)/nodejs/node.exe",
+    "isShellCommand": true,
+    "args": ["${file}"],
+    "showOutput": "always"
+}

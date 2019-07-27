@@ -1,0 +1,13 @@
+body.container {
+    max-width: 600px;
+}
+
+.checkbox {
+    margin-bottom: 0;
+    margin-right: 30px;
+}
+
+.done > .checkbox > label > span {
+    color: #aaa;
+    text-decoration: line-through;
+}

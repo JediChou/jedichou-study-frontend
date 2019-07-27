@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Easy UI - chapter 16 - menu</title>
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css" />
+	</head>
+	<body>
+	
+		<!-- class加载方式 -->
+		<!-- 菜单属性是data-options -->
+		<!-- Jedi: 特别要注意data-options中的格式是 data-options="[attribute1:value1],[attribute2:value2]" -->
+		<div id="box" class="easyui-menu" 
+			data-options="left:0,top:10,minWidth:200,hideOnUnhover:false" 
+			style="width:120px">
+			
+			<div id="new">new</div>
+			<div>
+				<span>open</span>
+				<!-- 这里要注意，要增加一个div并设置样式，否则子菜单无法显示 -->
+				<div style="width:150px">
+					<div><strong>Word文档</strong></div>
+					<div>Excel文档</div>
+				</div>
+			</div>
+			<!-- 不要把options写成opitions -->
+			<div data-options="iconCls:'icon-save'">save</div>
+			<div>quit</div>
+		</div>
+		
+		
+		<!-- help中的示例 
+		<div id="mm" class="easyui-menu" style="width:120px;">   
+			<div>New</div>   
+			<div>   
+				<span>Open</span>   
+				<div style="width:150px;">   
+					<div><b>Word</b></div>   
+					<div>Excel</div>   
+					<div>PowerPoint</div>   
+				</div>   
+			</div>   
+			<div data-options="iconCls:'icon-save'">Save</div>   
+			<div class="menu-sep"></div>   
+			<div>Exit</div>   
+		</div>
+		-->
+		
+	</body>
+</html>

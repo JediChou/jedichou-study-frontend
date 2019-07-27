@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang=zh-cn>
+    <head>
+        <title>Furry Friends Campaign</title>
+        <style>
+            /* 
+             * 这里设置clickMe div的样式，使它
+             * 与picframe div有相同的外观。
+             */
+            #clickMe {
+                background-color: #D8B363;
+                padding: 20px;
+                text-align: center;
+                width: 205px;
+                display: block;
+                border: 2px solid #000;
+            }
+            
+            /* 
+             * 将picframe选择器设置为"display
+             * none"，这样一来，页面加载时不会
+             * 显示这个div
+             */
+            #picframe {
+                background: #D8B36e;
+                padding: 20px;
+                width: 205px;
+                display: none;
+                border: 2px solid #000;
+            }
+        </style>
+        <script src="js/jquery-1.12.0.js"></script>
+    </head>
+    <body>
+       <div id="clickMe">Show Me the Furry Friend of the Day</div>
+       <div id="picframe">
+           <img src="images/Furry-girl.jpg">
+       </div>
+       <script>
+           $(document).ready(function(){
+               $("#clickMe").click(function(){
+                   
+                   // <code snippet 1>
+                   // slideUp方法会改变元素的height
+                   // 属性，直至高度为0，然后将元素隐藏。
+                   // $("div").slideUp();
+                   
+                   // <code snippet 2>
+                   // slideDown方法将元素
+                   // height属性从0改为css样式
+                   // 中设定的某个高度值。
+                   // Jedi: 如果没有则全部显示
+                   // $("div").slideDown();
+                   
+                   // <code snippet 3>
+                   // slideToggle动作指示“如果原
+                   // 来朝上，就向下滑动；如果原来
+                   // 朝下，则向上滑动”。
+                   // $("div").slideToggle(); 
+                   
+                   // <code snippet 4>
+                   // 实现淡入
+                   $("img").fadeIn(1000);
+                   $("#picframe").slideToggle("slow");
+                   
+                   // jQuery toolbox (Jedi: 这实际是个作业)
+                   // 1. jQuery function
+                   // 2. jQuery selector
+                   // 3. Fade effective:
+                   //   3.1 FadeIn
+                   //   3.2 FadeOut
+                   //   3.3 FdeTo
+                   //   3.4 FadeToggle
+               });
+           });
+       </script>
+    </body>
+</html>

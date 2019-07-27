@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>DOM and HTML</title>
+    </head>
+    <body>
+        <h3>document object model</h3>
+        <p>dom think the html is a node tree</p>
+        <script type="text/javascript">
+            var origLength = document.all.length;
+            document.write('document.all.length' + origLength + "<br />");
+            for(var i = 0; i<origLength; i++) {
+                document.write("document.all[" + i + "]=" + document.all[i].tagName + "<br />");
+            }
+        </script>
+    </body>
+</html>

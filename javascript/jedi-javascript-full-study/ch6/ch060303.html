@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function init(objName) {
+            var ent = document.getElementsByTagName(objName);
+            var str = "document " + ent[0].tagName + "'s nodes is : " + ent.length + "<br/><hr/>";
+            document.getElementById("res").innerHTML += str;
+        }
+    </script>
+</head>
+<body onload="init('tr')">
+    <p align="center" class="title">University Books:</p>
+    <table align="center" cellpadding="5" cellspacing="1">
+        <tr height="50">
+            <td colspan="7"><a name="000">Computer</a></td>
+        </tr>
+        <tr valign="bottom">
+            <td colspan="7"><a name="003">Database technical</a></td>
+        </tr>
+        <tr>
+            <th width="43">ID</th>
+            <th>ISDN</th>
+            <th width="399">Book Name</th>
+            <th width="39">Price</th>
+            <th widht="65">Author</th>
+            <th width="40">Publish year</th>
+        </tr>
+        <tr>
+            <td>92</td>
+            <td>TP91690</td>
+            <td>FoxPro 8.0 Programming</td>
+            <td>29</td>
+            <td>Xie Dong Hua</td>
+            <td>7505391690</td>
+        </tr>
+        <tr>
+            <td>93</td>
+            <td>TP91691</td>
+            <td>Advanced C# Programming Example</td>
+            <td>36</td>
+            <td>Algorithm Tim</td>
+            <td>7505391691</td>
+        </tr>
+    </table>
+    <div id="res"></div>
+</body>
+</html>

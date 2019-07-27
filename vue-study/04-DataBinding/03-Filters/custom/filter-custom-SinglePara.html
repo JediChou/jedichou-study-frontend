@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Single parameter filter of Vue.js</title>
+    <link rel="stylesheet" href="../../../css/site.css" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <article>
+            <header>Vue.js, 一个参数的自定义过滤器</header>
+            <p v-text="alert | reverse"></p>
+            <p v-text="message | reverse"></p>
+        </article>
+    </div>
+    <script>
+        Vue.filter("reverse", function(val){
+            return val.split('').reverse().join('');
+        });
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Star War',
+                alert: 'May the force with you'
+            }
+        });
+    </script>
+</body>
+</html>

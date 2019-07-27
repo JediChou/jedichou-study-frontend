@@ -1,0 +1,16 @@
+<!-- 演示数据绑定 -->
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    <div ng-controller="HelloController">
+        <input ng-model="greeting.text" />
+        <p>{{greeting.text}}, world</p>
+    </div>
+    <script src="../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h2>Acess JSON object element</h2>
+        <hr />
+        <p>
+            Employee I: <span id="bill_fname"></span><br />
+            List length: <span id="listlength"></span><br />
+        </p>
+        
+        <script type = "text/javascript">
+            var employees = [
+                { "firstName":"Bill", "lastName":"Gates" }, 
+                { "firstName":"George", "lastName":"Bush" }, 
+                { "firstName":"Thomas", "lastName":"Carter" }, 
+            ];
+            
+            document.getElementById("bill_fname").innerHTML = employees[0].firstName;
+             document.getElementById("listlength").innerHTML = employees.length;
+        </script>
+    </body>
+</html>

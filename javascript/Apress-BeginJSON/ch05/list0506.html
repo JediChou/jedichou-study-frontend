@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="json2.js"></script>
+    </head>
+    <body>
+        <script>
+            // obtain a reference to the body tagg
+            var body = document.getElementsByTagName("body")[0];
+            
+            // function log will append a value to the body for output
+            function log(jsonText) {
+                // surround supplied jsonText with double quotes and append a new line
+                body.innerHTML += '"' + jsonText + '"<br/>';
+            }
+            
+            var author = new Object();
+                author.name = "Ben";
+                author.age = 36;
+                author.pets = [
+                    { name: "DaWan", age: 3.5 },
+                    { name: "XiWan", age: 4 }  
+                ];
+            
+            var JSONtext = JSON.stringify(author);
+            log(JSONtext);
+        </script>
+    </body>
+</html>>

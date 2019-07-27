@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>任務列表 - Angular</title>
+    <link rel="stylesheet" href="modules/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="container" ng-app="TodoApp">
+    <header>
+        <h1 class="display-3">任務列表</h1>
+        <hr>
+    </header>
+    <section ng-controller="MainController">
+        <form class="input-group input-group-lg">
+            <input type="text" class="form-control" ng-model="text">
+            <span class="input-group-btn">
+                <button class="btn btn-secondary" ng-click="add()">Submit</button>
+            </span>
+        </form>
+        <ul class="list-group m-y-1">
+            <li class="list-group-item" ng-class="{'done':item.done}" ng-repeat="item in todoList">
+                <div type="button" class="close" aria-label="Close" ng-click="delete(item)">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="item.done">
+                        <span>{{item.text}}</span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <p>總共:<strong>{{todoList.length}}</strong>&nbsp;&nbsp;已完成:<strong>{{doneCount()}}</strong></p>
+    </section>
+    <script src="modules/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

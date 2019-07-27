@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="InitTitle">{{page.title}}</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 ng-controller="InitTitle">{{page.title}} - 演示使用ng-src</h1>
+            <hr>
+        </header>
+        <section>
+            <table ng-controller="displayImgController">
+                <tr ng-repeat="img in images"
+                    ng-click="selectFood($index)"
+                    ng-class="{selected: $index==selectedRow}">
+                    <td>Image Name: {{img.path}}{{img.name}}</td>
+                    <td><img ng-src="{{img.path}}{{img.name}}"></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

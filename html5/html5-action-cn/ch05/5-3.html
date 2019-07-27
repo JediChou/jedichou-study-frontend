@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Get file type and ize</title>
+		<link href="./css5.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" language="javascript" src="./js3.js">
+		</script>
+	</head>
+
+	<body>
+		<form id="frmTmp">
+			<fieldset>
+				<legend>upload muliti-file</legend>
+				<input type="file" name="fileUpload" id="fileUpload"
+					   multiple="true"
+					   onChange="fileUpload_GetFileList(this.files);" />
+			</fieldset>
+			<ul id="ulUpload"></ul>
+		</form>
+	</body>
+</html>

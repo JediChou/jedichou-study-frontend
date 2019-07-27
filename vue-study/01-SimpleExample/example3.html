@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<title>vue.js example3.html</title>
+		<script src="../lib/vue.js"></script>
+		<link href="../css/site.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ul>
+		</div>
+		
+		<script>
+			
+			// vue.js example3.html - 渲染列表
+			// Ref: http://v1-cn.vuejs.org/guide/index.html
+			
+			new Vue({
+				el: '#app',
+				data: {
+					todos: [
+						{ text: 'Learn JavaScript' },
+						{ text: 'Learn Vue.js'},
+						{ text: 'Build Something Awesome'}
+					]
+				}
+			});
+			
+		</script>
+	</body>
+</html>

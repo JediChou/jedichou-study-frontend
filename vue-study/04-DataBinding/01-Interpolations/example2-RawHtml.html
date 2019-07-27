@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>example 2 - Raw Html</title>
+    <script src="../../lib/vue.js"></script>
+    <link href="../../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- View -->
+    <div class="content">
+        <div id="app">
+            Raw Html: <span>{{{ link }}}</span>
+        </div>
+    </div>
+
+    <!-- ViewModel -->
+    <script>
+
+        var data = { link:'<a href="http://www.163.com">www.163.com</a>' };
+        var vm = new Vue({
+            el: '#app',
+            data: data
+        });
+
+    </script>
+
+</body>
+</html>

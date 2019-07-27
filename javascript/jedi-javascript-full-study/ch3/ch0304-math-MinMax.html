@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Compare</title>
+        <script type="text/javascript">
+            function compare(form) {
+                var str1 = form.txt1.value;
+                var str2 = form.txt2.value;
+
+                var max = Math.max(str1, str2);
+                var min = Math.min(str1, str2);
+
+                alert("the bigger number is : " + max);
+                alert("the smaller number is : " + min);
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin: 15px auto; background-color: #9ACDCD;">
+            <h2>compare two numbers</h2>
+            <form id="form1" name="form1" onsubmit="return false">
+                number1:<input type="text" name="txt1" /><br />
+                number2:<input type="text" name="txt2" /><br />
+                <input type="submit" value="submit" onclick="compare(this.form)"/>
+            </form>
+        </div>
+    </body>
+</html>

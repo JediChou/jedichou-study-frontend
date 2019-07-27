@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>currency filter of Vue.js</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/site.css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul class="contents">
+            <li v-for="plant in plants">
+                {{plant | currency}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        var data = {plants:[20,30,40,50]};
+        new Vue({el:'#app', data:data});
+    </script>
+</body>
+</html>

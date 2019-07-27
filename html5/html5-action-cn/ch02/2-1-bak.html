@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>How to use detailas element</title>
+		<style type="text/css">
+			body {
+				font-size: 12px
+			}
+			span {
+				font-weight:bold
+			}
+			details {
+				overflow: hidden;
+				height: 0;
+				padding-left: 200px;
+				position: relative;
+				display:block;
+			}
+			details[open] {
+				height: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<span>hidden foot comment</span>
+		<details>
+			The page generate by 2011-03-17 Jedi
+		</details>
+
+		<!-- <span>echo foot comment</span>
+		<details open="open">
+			The page generate by 2011-03-17 Jedi
+		<details> -->
+	</body>
+</html>

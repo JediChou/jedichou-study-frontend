@@ -1,0 +1,19 @@
+<html>
+    <title>Javascript Json example</title>
+    <body>
+        <script language="javascript">
+            
+            var i = 0;
+            var myJSONObject = {"bindings": [
+                    {"ircEvent": "PRIVMSG", "method": "newURI", "regex": "^http://.*"},
+                    {"ircEvent": "PRIVMSG", "method": "deleteURI", "regex": "^delete.*"},
+                    {"ircEvent": "PRIVMSG", "method": "randomURI", "regex": "^random.*"}
+                ]
+            };
+            
+            for( i = 0; i < 3; i++) {
+                alert(myJSONObject.bindings[i].method);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Vue.js example5.html</title>
+    <script src="../lib/vue.js"></script>
+    <link href="../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="app">
+        <input v-model="newTodo" v-on:keyup.enter="addTodo">
+        <ul>
+            <li v-for="todo in todos">
+                <span>{{todo.text}}</span>
+                <button v-on:click="removeTodo($index)">x</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        // vue.js example5.html - 综合示例
+        // Ref: http://v1-cn.vuejs.org/guide/index.html#处理用户输入
+
+        var model = {
+            newTodo: '',
+            todos: [
+                {text: 'Add some todos'}
+            ]
+        };
+
+        var vm = new Vue({
+            el: '#app',
+            data: model,
+            methods: {
+                // Notice: 绑定事件(居然可以没有逗号, 感觉不太严谨)
+                addTodo: function() {
+                    var text = this.newTodo.trim();
+                    if (text) {
+                        this.todos.push({text: text})
+                        this.newTodo = ''
+                    }
+                },
+                removeTodo: function(index) {
+                    this.todos.splice(index, 1)
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

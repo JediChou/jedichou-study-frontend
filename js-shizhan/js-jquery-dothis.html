@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type">
+    <meta content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="./jquery.js"></script>
+	</head>
+
+	<body>
+		<a href="http://www.google.com">Google</a><br/>
+		<a href="http://www.yahoo.com">Yahoo</a><br/>
+		<a href="http://www.bing.com">Bing</a><br/>
+
+		<div id="result">
+			<p id="result-output">Result:</p>
+		</div>
+
+		<script type="text/javascript">
+			var output = $('#result-output');
+			$("a").each(function(){
+				var extLink = $(this).attr('href');
+				alert(extLink);
+				output.append("<br/>" + extLink);
+			});
+		</script>
+	</body>
+</html>

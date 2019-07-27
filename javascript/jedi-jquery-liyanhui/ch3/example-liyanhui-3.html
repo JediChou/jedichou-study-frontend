@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jquery core</title>
+    <script type="text/javascript" src="../js/jquery-1.11.2.js" ></script>
+</head>
+<body>
+    <div id="box">core</div>
+    <script type="text/javascript">
+
+        // the first method
+//        $(function(){
+//            $('#box').css('color', 'red');
+//        });
+//
+//
+//        // the second method
+//        jQuery(function(){
+//            jQuery('#box').css('color', 'red');
+//        });
+
+        // 3种调用方式
+        // $(function(){});
+        // $('#box)
+        // $('#box').css('color', 'red');
+
+
+        // 演示jQuery或js的连缀功能
+        $(function(){
+//            alert($);                             // jquery内部韩素
+//            alert($());                           // jquery object
+//            alert($('#box'));                     // jquery object
+//            alert($('#box').css('color', 'red')); // jquery object
+        });
+
+    </script>
+</body>
+</html>

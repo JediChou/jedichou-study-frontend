@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container" ng-app="app">
+    <div ng-controller="HelloContainer">
+        <p>{{greeting.text}}</p>
+    </div>
+    <script src="../modules/angular/angular.js"></script>
+    <script src="controllers.js"></script>
+
+    <!--
+       <坑>：分别在head和body加载两次controller.js会报错
+       Uncaught TypeError: Cannot read property 'module' of undefined
+    -->
+
+</body>
+</html>

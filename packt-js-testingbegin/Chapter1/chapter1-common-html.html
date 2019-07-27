@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>This is a sample title</title>
+        <style type="text/css">
+            body{
+                background-color:#cccccc;
+            }
+            /* Here we create a CSS selector for IDs by a name preceded by a
+            bash character */
+            #container{
+                width:750px;
+                height:430px;
+                border:1px;
+            }
+            /* #[nameOfElement] */
+            #boxed1{
+                background-color:#ff6600;
+                border:2px;
+                height:360px;
+                width:300px;
+                padding:20px;
+                float:left;
+                margin:10px;
+            }
+            #boxed2{
+                background-color:#ff6600;
+                border:2px;
+                height:360px;
+                width:300px;
+                padding:20px;
+                float:left;
+                margin:10px;
+            }
+            #ordered1{
+                font-size:20px;
+                color:#ce0000;
+                text-align:center;
+            }
+            #unordered1{
+                font-size:12px;
+                color:#000000;
+            }
+            #unordered2{
+                font-size:12px;
+                color:#000f00;
+            }
+            #unordered2.nice{
+                font-size:16px;
+            }
+            .intro{
+                color:black;
+                font-weight:bold;
+            }
+            a:link {color:#FF0000;}
+            a:visited {color:#00FF00;}
+            a:hover {color:#FF00FF;}
+            a:active {color:#0000FF;}
+        </style>
+    </head>
+    <!-- Some code ommitted above -->
+    <body>
+        <h1>This is header 1</h1>
+        <h2>This is header 2</h2>
+        <h3>This is header 3</h3>
+        <p class="intro">This is a paragraph. I am styled by a class
+            called "intro"</p>
+        <hr>
+            <div id="container">
+                <div id="boxed1">I am enclosed within a <i>div</i> tag. And it can be styled
+                    on a document level.
+                    <ol id="ordered1">
+                        <li>This is an ordered list and it is centered</li>
+                        <li>apple</li>
+                        <li>orange</li>
+                        <li>banana</li>
+                    </ol>
+                    <ul id="unordered1">
+                        <li>This is an unordered list. And it can be styled by CSS.</li>
+                        <li>apple</li>
+                        <li>orange</li>
+                        <li>banana</li>
+                    </ul>
+                    <a class="link" href="#">I am a link that is styled by a class</a>
+                </div>
+                <div id="boxed2">I am enclosed with a <i>div</i> tag. And it can be 
+                    styled by CSS
+                    <ol id="ordered2">
+                        <li>This is an ordered list and it is centered</li>
+                        <li>apple</li>
+                        <li>orange</li>
+                        <li>banana</li>
+                    </ol>
+                    <ul class="nice" id="unordered2">
+                        <li>This is an unordered list. And it can be styled by
+                            CSS</li>
+                        <li>apple</li>
+                        <li>orange</li>
+                        <li>banana</li>
+                    </ul>
+                    <a class="link" href="#">This is a link. And it can be styled by CSS</a>
+                </div>
+            </div>
+    </body>
+</html>
+

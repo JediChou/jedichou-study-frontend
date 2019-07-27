@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>OReiily - Developing Backone.js Applications</title>
+	</head>
+	<body>
+		<span>OReiily - Developing Backone.js Applications</span><br/>
+		<span>2.1 Getting Set up</span></br>
+		<span>A normall model example</span>
+	</body>
+	<script type="text/javascript" src="../lib/jquery-min.js"></script>		<!-- jQuery JavaScript Library v1.11.1 -->
+	<script type="text/javascript" src="../lib/underscore-min.js"></script>	<!-- Underscore.js 1.8.2 -->
+	<script type="text/javascript" src="../lib/backbone-min.js"></script>		<!-- unknow -->
+	<script type="text/javascript">
+		(function($){
+			var Todo = Backbone.Model.extend({});
+			
+			// Wen can the create our own concrete instance of a (TODO) model
+			// with no values at all:
+			var todo1 = new Todo();
+			
+			// Flowing logs: {}
+			console.log(JSON.stringify(todo1));
+			
+			// or with some arbitrary data:
+			var todo2 = new Todo({
+				title: 'Check the attributes of both model instances in the console.',
+				completed: true
+			});
+			
+			// Following logs: {"title":"Check the attributes of both model"
+			// instances in the console.","completed":"true"}
+			console.log(JSON.stringify(todo2));
+			
+		})(jQuery);
+	</script>
+</html>

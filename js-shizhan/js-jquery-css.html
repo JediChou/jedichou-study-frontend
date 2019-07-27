@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="./jquery.js"></script>
+	</head>
+
+	<body font-size='200%'>
+		<h1>This is a test for jQuery css method.</h1>
+		<hr/>
+		<p>	Don't forget Jobs said: "keep foolish".	</p>
+		<script type="text/javascript">
+			var baseFont = $('body').css('font-size');
+			baseFont = parseInt(baseFont, 10);
+			$('body').css('font-size', baseFont*2);
+		</script>
+	</body>
+</html>

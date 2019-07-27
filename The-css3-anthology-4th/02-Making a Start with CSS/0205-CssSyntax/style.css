@@ -1,0 +1,4 @@
+/* selector { [property: value]; [property: value] } */
+h1, h2 {
+    font-family: sans-serif; color: black;
+}

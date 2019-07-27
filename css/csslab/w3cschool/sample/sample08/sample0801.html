@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <title>Sample0801-CSS属性选择器</title>
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/indexcss.css">
+    <style>
+        /* customer style */
+        .article {
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+        }
+
+        [title] {
+            font-size: 14pt;
+            color: #ff0000;
+            background-color: #e5e5e5;
+            margin: 10px;
+            padding: 10px;
+            border-top: 4px #269abc solid;
+            border-left: 4px #269abc solid;
+        }
+
+        .article p {
+            font-size: 12pt;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Sample0801-CSS属性选择器</h1>
+
+            <!-- use title property -->
+            <div class="col-lg-8">
+                <div class="article" title="jedi-red">
+                    <header>CSS选择器-red</header>
+                    <p>属性选择器可以用于通过tag的property来绑定CSS样式</p>
+                </div>
+                <div class="article" title="jedi-green">
+                    <header>CSS选择器-green</header>
+                    <p>属性选择器可以用于通过tag的property来绑定CSS样式</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="other-info">
+                    <header>Author</header>
+                    <ul>
+                        <li>Jedi Chou</li>
+                        <li>skyzhx@163.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Question Solve: filterBy with index</title>
+    <link rel="stylesheet" href="../../../css/site.css" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in items | orderBy 'year' | filterBy 'wrong' ">
+                <span>{{item.msg}} -- {{$index + 1}}</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        var model = {
+            items: [
+                {msg:'Something is wrong?', year: 2011},
+                {msg:'What wrong?', year: 2012},
+                {msg:'It is OK?', year:2014},
+                {msg:'Don\'t make this wrong again', year:2014}
+            ]
+        };
+        new Vue({
+            el: '#app',
+            data: model
+        });
+    </script>
+</body>
+</html>

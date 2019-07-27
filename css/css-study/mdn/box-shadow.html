@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-3.3.5/css/bootstrap.css">
+    <style>
+        li {
+            width: 100px;
+            text-align: center;
+
+            /* 显示box效果 */
+            padding: 10px;
+            margin: 0 30px 30px;
+            background-color: #f4f7f8;
+            box-shadow: 3px 3px 0 3px #eaeff2;
+
+            /* 去掉有序标记 */
+            display: list-item;
+            list-style-type: none;
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>来自MDN的box-shadow例子</h3>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="row" style="padding-top: 100px">
+            <ul >
+                <li>Li 1</li>
+                <li>Li 2</li>
+                <li>Li 3</li>
+            </ul>
+            <ul >
+                <li>Li 4</li>
+                <li>Li 5</li>
+                <li>Li 6</li>
+                <li>Li 7</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <ul >
+                <li>Li div2-1</li>
+                <li>Li div2-2</li>
+                <li>Li div2-3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

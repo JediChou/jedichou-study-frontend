@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en"><meta charset="UTF-8"></head>
+    <body onload="alert(countTags(document.body));">
+        <h1>count</h1>
+    </body>
+    <script type="text/javascript">
+        function countTags(n){
+            var numTags = 0;
+            if(n.nodeType == 1) numTags++;
+
+            var child = n.childNodes;
+            for(var i = 0; i < child.length; i++)
+                numTags += countTags(child[i]);
+
+            return numTags;
+        }
+    </script>
+</html>

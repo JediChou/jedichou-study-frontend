@@ -1,0 +1,17 @@
+/*#box {*/
+    /*color: red;*/
+/*}*/
+
+/*div {*/
+    /*color: orange;*/
+/*}*/
+
+/*.pox {*/
+    /*color: green;*/
+/*}*/
+
+/* #box2 > p, 只允许子节点加上颜色 */
+/* IE don't support */
+/*#box2 > p {*/
+    /*color: burlywood;*/
+/*}*/

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript">
+        String.prototype.Trim  = function() { return this.replace(/(^\s*)|(\s*$)/g, ""); }
+        String.prototype.LTrim = function() { return this.replace(/(^\s*)/g, ""); }
+        String.prototype.RTrim = function() { return this.replace(/(\s*$)/g, ""); }
+        document.write("[" + " abc ".Trim()  + "]" + "<br />");
+        document.write("[" + " abc ".LTrim() + "]" + "<br />");
+        document.write("[" + " abc ".RTrim() + "]" + "<br />");
+    </script>
+</body>
+</html>

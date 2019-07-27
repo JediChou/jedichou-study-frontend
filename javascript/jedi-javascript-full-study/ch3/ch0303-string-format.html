@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>string format</title>
+    </head>
+    <body>
+        <div style="background-color: #9ACDCD">
+            <script type="text/javascript">
+                var vText = "nothing impossible";
+                var vBig = vText.big();
+                var vSmall = vText.small();
+                var vBold = vText.bold();
+                var vItalics = vText.italics();
+                var vStrike = vText.strike();
+
+                with(document) {
+                    write("Big font: " + vBig + "<br />");
+                    write("Small font: " + vSmall + "<br />");
+                    write("Bold font: " + vBold + "<br />");
+                    write("Italics font: " + vItalics + "<br />");
+                    write("Strike font: " + vStrike + "<br />");
+                }
+            </script>
+        </div>
+    </body>
+</html>

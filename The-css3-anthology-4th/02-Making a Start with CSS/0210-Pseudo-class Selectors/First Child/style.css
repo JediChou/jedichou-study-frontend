@@ -1,0 +1,12 @@
+/*.article p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: blue;
+}*/
+
+/* use style to first child element */
+.article p:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: blue;
+}

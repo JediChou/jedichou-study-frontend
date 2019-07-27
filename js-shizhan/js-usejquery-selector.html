@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>js-UseJQuery-Selector</title>
+		<script type="text/javascript" src="./jquery.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="errors">
+				<h2>Errors:</h2>
+			</div>
+		</div>
+
+		<div id="container">
+			<div id="OtherErrors">
+				<h2>OtherErrors:</h2>
+			</div>
+		</div>
+
+		<div id="InputForm">
+			<div id="InputButton">
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$('#errors').html('<p>Call JQuery success.</p>');
+			$('#OtherErrors').prepend('<h1> new Errors</h1>');
+			$('#InputButton').after("<input type='button' value='username' name='username' id='username'/>");
+		</script>
+	</body>
+
+</html>

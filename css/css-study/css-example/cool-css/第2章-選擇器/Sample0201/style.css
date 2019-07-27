@@ -1,0 +1,21 @@
+/* 偽元素舉例 pseudo-element */
+h1::first-letter {
+    font-size: 250%;
+}
+
+/*  css 2.1 - 其他的偽類
+:link - 未訪問過的鏈接
+:visited - 訪問過的鏈接
+:hover -- 鼠標懸停的元素;
+:focus -- 獲取焦點的元素;
+:active -- 激活的元素（例如一個被單擊的鏈接元素）;
+:first-child  -- 作為其他元素第一個子元素的元素;
+:lang() -- 根據元素的lang屬性確定的元素;
+*/
+
+/*  css 2.1 - 其他的偽元素
+::first-line
+::first-letter
+::before
+::after
+*/

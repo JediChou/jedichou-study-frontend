@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>Backbone.js Example 2 - model</title>
+	</head>
+	<body>
+		<!-- your html code -->
+	</body>
+	<script type="text/javascript" src="../lib/jquery-min.js"></script>		<!-- jQuery JavaScript Library v1.11.1 -->
+	<script type="text/javascript" src="../lib/underscore-min.js"></script>	<!-- Underscore.js 1.8.2 -->
+	<script type="text/javascript" src="../lib/backbone-min.js"></script>	<!-- unknow -->
+	<script type="text/javascript">
+		(function($){
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.1, create a simple object
+			/**********************************************************************
+			Man = Backbone.Model.extend({
+				initialize : function() { alert('Hey, you create a Man object!'); }
+			});
+			var man = new Man;
+			***********************************************************************/
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.2.1, assign value to object - method 1
+			/**********************************************************************
+			Man = Backbone.Model.extend({
+				initialize : function() { alert('Hey, you create a Man object!'); },
+				defaults : {name:'张三', age:'38'}
+			});
+			var man = new Man;
+			alert(man.get('name'));
+			***********************************************************************/
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.2.2, assign value to object - method 2
+			/**********************************************************************
+			Man = Backbone.Model.extend({
+				initialize : function() { alert('Hey, you create a Man object!'); }
+			});
+			var man = new Man;
+			man.set({name:'张三', age:'38'});
+			alert(man.get('name'));
+			***********************************************************************/
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.3, function of class
+			/**********************************************************************
+			Man = Backbone.Model.extend({
+				initialize : function() { alert('Hey, you create a Man object!'); },
+				defaults : {name:'张三', age:'38'},
+				aboutMe : function() { return 'I\'m '+this.get('name')+'. And '+this.get('age')+' years old.';},
+			});
+			var man = new Man;
+			alert(man.aboutMe());
+			/***********************************************************************/
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.4, monitor object attribute's change
+			/**********************************************************************
+			Man = Backbone.Model.extend({
+				initialize : function() { 
+					alert('Hey, you create a Man object!');
+					// bind in the constructor
+					this.bind('change:name', function(){
+						var name = this.get('name');
+						alert('the name property change to: ' + name);
+					});
+				},
+				defaults : {name:'张三', age:'38'},
+				aboutMe : function() { return 'I\'m '+this.get('name')+'. And '+this.get('age')+' years old.';},
+			});
+			var man = new Man;
+			man.set({name:'Jedi'});
+			***********************************************************************/
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.5, add validate rules or error tips to object
+			/**********************************************************************
+			Man = Backbone.Model.extend({
+				initialize : function() { 
+					alert('Hey, you create a Man object!');
+					// bind in the constructor
+					this.bind('change:name', function(){
+						var name = this.get('name');
+						alert('the name property change to: ' + name);
+					});
+				},
+				defaults : {name:'张三', age:'38'},
+				validate : function(attributes) {
+					if(attributes.name == '') {
+						return "name can't be empty";
+					}
+				},
+				aboutMe : function() { return 'I\'m '+this.get('name')+'. And '+this.get('age')+' years old.';},
+			});
+			var man = new Man;
+			man.set({name:''});
+			
+			// check it and print valide message to console.
+			// validate operate pls refer: 
+			//    url 1: http://zhidao.baidu.com/link?url=6CbTovKHiDmq7SE4C8VKvVSRacUxPY54b0XGqGbTb0GmspPJ161yWVMDcna7juNLndd2iMV8LmIcs9kmgGZR87XlXUjpsjHF8uozxnbtwd_
+			//    url 2: http://stackoverflow.com/questions/14426155/backbone-validate-does-not-work
+			man.isValid();
+			console.log(man.validationError);
+			//***********************************************************************/
+			
+			///////////////////////////////////////////////////////////////////////
+			// example 2.6, save or get object (debug with web server)
+			//**********************************************************************
+			Man = Backbone.Model.extend({
+				url : '/save/',
+				initialize : function() { 
+					alert('Hey, you create a Man object!');
+					// bind in the constructor
+					this.bind('change:name', function(){
+						var name = this.get('name');
+						alert('the name property change to: ' + name);
+					});
+				},
+				defaults : {name:'张三', age:'38'},
+				validate : function(attributes) {
+					if(attributes.name == '') {
+						return "name can't be empty";
+					}
+				},
+				aboutMe : function() { return 'I\'m '+this.get('name')+'. And '+this.get('age')+' years old.';},
+			});
+			var man = new Man;
+			man.set({name:''});
+			man.isValid();
+			console.log(man.validationError);
+			//***********************************************************************/
+			
+		})(jQuery);
+	</script>
+</html>

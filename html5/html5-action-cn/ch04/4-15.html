@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>How to use setCustomValidity method in the form</title>
+		<link href="./css4.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" language="javascript" src="./js15.js">
+		</script>
+	</head>
+
+	<body>
+		<form id="frmTmp" onSubmit="return setErrorInfo()">
+			<fieldset>
+				<legend>setCustomValidity() method:</legend>
+				<p>Pls input password:
+					<input name="txtPassWord_1" id="txtPassWord_1"
+						   type="password" class="inputtxt"
+						   pattern="^[a-zA-Z]\w{5,7}$" required="true" /> *
+				</p>
+				<p>Pls input same password again:
+					<input name="txtPassWord_2" id="txtPassWord_2"
+						   type="password" class="inputtxt"
+						   pattern="^[a-zA-Z]\w{5,7}$" required="true" />
+				</p>
+				<p class="p_center">
+					<input name="frmSubmit" type="submit" class="inputbtn" value="Yes" />
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

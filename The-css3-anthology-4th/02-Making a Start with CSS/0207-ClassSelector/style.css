@@ -1,0 +1,11 @@
+/* Type Selector */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    color: green;
+}
+
+/* Class Selector (Jedi: 前面加了个点) */
+.sidebar {
+    color: blue;
+}

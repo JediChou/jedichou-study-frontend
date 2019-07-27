@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>hidden property</title>
+		<link href="./css3.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" async="true">
+			function Rdo_Click(v) {
+				var bInShow = (v)? false:true;
+				var strArt=document.getElementById("art");
+				strArt.setAttribute("hidden", bInShow);
+			}
+		</script>
+	</head>
+	<body>
+		<h5>The hidden properties of element </h5>
+		<nav style="padding-top:5px;padding-bottom:5px">
+			<input type=radio id=rdoHidden_1 onClick="Rdo_Click(1)" name=rdoHidden value=1 checked=true />Echo
+			<input type=radio id=rdoHidden_2 onClick="Rdo_Click(0)" name=rdoHidden value=0 />Hidden
+		</nav>
+		<article id="art" class="p3_8">
+			Nice day! Blue sky, a lot white cloud.
+		</article>
+	</body>
+</html>

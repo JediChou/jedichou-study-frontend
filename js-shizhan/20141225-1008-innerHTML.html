@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<title>How to use innerHTML</title>
+	</head>
+
+	<body>
+		<p>The first content for html5.</p>
+		<p>The second content for html5.</p>
+		<p id='result'></p>
+		
+		<script language="javascript">
+			// get a list of all <p> tags on page
+			var result = document.getElementById('result');
+			var content = document.getElementsByTagName('p')[0].innerHTML;		
+			result.innerHTML = "<hr/><b>First p-content is: </b>" + content;
+		</script>
+	</body>
+</html>

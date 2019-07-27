@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h2>Use Javascript create JSON object</h2>
+        <hr />
+        <p>
+            Name: <span id = "jname"></span><br/>
+            Age: <span id = "jage"></span><br />
+            Address: <span id = "jaddress"></span><br />
+            Phone: <span id = "jphone"></span><br />
+        </p>
+        
+        <script type = "text/javascript">
+            var JSONObject = {
+                "name" : "Jedi Chou",
+                "age" : 34,
+                "address" : "ShenZhen foxconn of GuangDong Province",
+                "phone" : "560-74449"
+            };
+            
+            document.getElementById("jname").innerHTML = JSONObject.name;
+            document.getElementById("jage").innerHTML = JSONObject.age;
+            document.getElementById("jaddress").innerHTML = JSONObject.address;
+            document.getElementById("jphone").innerHTML = JSONObject.phone;
+        </script>
+    </body>
+</html>

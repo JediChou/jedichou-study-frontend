@@ -1,0 +1,39 @@
+// Dart in Action
+// Listing 5.9 Example pubspec.yaml for loglib
+
+// package name
+name: loglib
+
+// package version
+version: 1.2.3
+
+// description of library
+description: >
+    Provides a simple logging framework
+    to log to the console
+
+// You can use authors: with YAML list of multiple authors
+author: You <you@your.email.com>
+
+// Library homepage
+homepage: http://your.website.com/loglib
+
+// dependencies section for pub to download
+dependencies:
+    
+    // packages hosted on pub.dartlang.org,
+    // with or without version numbers
+    hosted_library:
+    versioned_library: '1.2.3'
+
+    // Deploys package as part of Dart SDK
+    // but not part of core
+    unittest:
+        any
+
+    // Private package hosted on interal server
+    // with specific version range
+    my_security_library:
+        hosted:
+            url: http://your.internal.server.com
+        version: '>=1.0.1 <2.0.0'        

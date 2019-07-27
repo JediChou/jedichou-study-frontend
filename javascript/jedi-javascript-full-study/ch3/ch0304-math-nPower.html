@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Calculate result of power n</title>
+        <script type="text/javascript">
+            function calculate_pow(form){
+                var str1 = form.txt1.value;
+                var str2 = form.txt2.value;
+                var result = Math.pow(str1, str2);
+                alert("The result is: " + result);
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin: 15px auto; background-color: #9ACDCD;">
+            <form id="form1" name="form1" onsubmit="return false">
+                number1: <input type="text" name="txt1" /><br/>
+                number2: <input type="text" name="txt2" /><br/>
+                <input type="submit" value="view result" onclick="calculate_pow(form1)"/>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+.selected {
+    background-color: #a3d7a3;
+    font-family: "Courier New", Courier, monospace;
+    color: crimson;
+}
+
+td {
+    margin: 10px;
+}

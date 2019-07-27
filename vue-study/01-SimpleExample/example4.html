@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>vue.js example4.html</title>
+		<script src="../lib/vue.js"></script>
+		<link href="../css/site.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="app">
+			<p>{{message}}</p>
+			<button v-on:click="reverseMessage">Reverse Message</button>
+		</div>
+		
+		<script>
+
+			// Vue.js example4.html - 处理用户输入
+			// Ref: http://v1-cn.vuejs.org/guide/index.html
+
+			new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello Vue.js!'
+				},
+				methods: {
+					reverseMessage: function() {
+						this.message = this.message.split('').reverse().join('')
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

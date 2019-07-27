@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="./jquery.js"></script>
+	</head>
+
+	<body>
+		<img id="banner" src="./Desert.jpg" />
+		<script type="text/javascript">
+			if( $('#banner') ) {
+				$('#banner').attr('src', './Chrysanthemum.jpg');
+			} else {
+				document.write("don't find elt by id");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="/lib/jquery-1.12.4.min.js"></script>
+        <script>
+            $('document').ready(function(){
+				var obj = {};
+				var obj.foo = "hi"; // SyntaxError missing ; before statement
+
+				var array = [];
+				var array[0] = "there"; // SyntaxError missing ; before statement
+            });
+        </script>
+    </body>
+</html>

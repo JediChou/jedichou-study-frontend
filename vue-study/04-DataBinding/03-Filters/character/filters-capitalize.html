@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js filters - capitalize</title>
+    <script src="../../../lib/vue.js"></script>
+    <link href="../../../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- View -->
+    <div id="app">
+        <section>
+            <h2>Female</h2>
+            <ul>
+                <!-- 首字母大写 -->
+                <li v-for="girl in girls">
+                    <span>{{girl | capitalize}}</span>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+
+        // Ref: https://segmentfault.com/a/1190000006998227#articleHeader18
+
+        // Model
+        var data = {
+            girls: [
+                'nicki',
+                'clarkson',
+                'lady',
+                'colbie',
+                'kesha'
+            ]
+        }
+
+        // ViewModel
+        new Vue({
+            el: '#app',
+            data: data
+        });
+
+    </script>
+
+</body>
+</html>

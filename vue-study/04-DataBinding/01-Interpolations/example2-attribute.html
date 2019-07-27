@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>example 2 - Attribute</title>
+    <script src="../../lib/vue.js"></script>
+    <link href="../../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- View -->
+    <div id="app">
+        <h2>Wah...</h2>
+        <div id="{{message.title}}">
+            <article>
+                <span><b><a href="{{message.href}}">{{message.title}}</a></b></span>
+                <p>{{message.value}}</p>
+            </article>
+        </div>
+    </div>
+
+    <script>
+
+        // Model
+        var data = {
+            message: {
+                title: 'Cryptography',
+                value: 'Cryptography (or cryptology) is derived from Greek κρυπτός kryptós "hidden,"',
+                href: 'https://en.wikipedia.org/wiki/Portal:Mathematics'
+            }
+        }
+
+        // ViewModel
+        var vm = new Vue({
+            el: '#app',
+            data: data
+        });
+
+    </script>
+</body>
+</html>

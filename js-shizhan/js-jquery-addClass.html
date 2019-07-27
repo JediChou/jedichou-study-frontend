@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>How to use jquery. addClass</title>
+		<script type="text/javascript" src="./jquery.js"></script>
+	</head>
+
+	<body>
+		<div id="links">
+			<a id="link1" href="http://www.oreilly.com/">OReilly</a><br/>
+			<a id="link2" href="http://www.google.com/">Google</a><br/>
+		</div>
+
+		<script type="text/javascript">
+			$('a').addClass('externalLink');
+			// The class attribute will be added.
+			// But those attributes don't diplay 
+			// on the html source viewer. Only use
+			// browser console to view this change.
+		</script>
+	</body>
+</html>

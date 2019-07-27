@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Use multi get element method to located element</title>
+	<head>
+
+	<body>
+		<!-- prepair some information -->
+		<p class="t">a text</p>
+		<p class="t">the other text</p>
+
+		<div id="p">
+			<a ref="http://yahoo.com">Yahoo</a><br/>
+			<p>This link is a search website</p>
+
+			<a ref="http://google.com">Google</a><br/>
+			<p>This link is other search website</p>
+		</div>
+
+		<br/><br/>
+		<p id="result"></p>
+
+		<script language="javascript">
+			
+			// use multi get element method to located
+			// elements.
+			// step-1, find outside container
+			// step-2, find inner container
+			var banner = document.getElementById("p");
+			var bannerlinks = banner.getElementsByTagName("a");
+			var bannerlinks_length = bannerlinks.length;
+			
+			// output result
+			var output = document.getElementById("result");
+			output.innerHTML = "result is : " + bannerlinks_length;
+
+		</script>
+	</body>
+</html>

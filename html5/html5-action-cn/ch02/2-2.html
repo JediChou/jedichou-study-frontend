@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>script control tag details</title>
+		<style type="text/css">
+			body { font-size:12px }
+			span { font-weight:blod }
+			details {
+				overflow: hidden;
+				height: 0;
+				padding-left:200px;
+				position:relative;
+				display: block;
+			}
+			details[open] { height:auto; }
+		</style>
+	</head>
+	<body>
+		<span onClick="span1_click();">Foot memo</span>
+		<details id="details1">Generate at 2011-3-17</details>
+
+		<script type="text/javascript">
+			function span1_click() {
+				var objD = document.getElementById("details1");
+				var attD = objD.getAttribute("open");
+
+				if(attD!="open") {
+					objD.setAttribute("open","open");
+				} else {
+					objD.removeAttribute("open");
+				}
+			}
+		</script>
+	</body>
+</html>

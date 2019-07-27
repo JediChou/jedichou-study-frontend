@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Easy UI - chapter 30 - Slider</title>
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css" />
+	</head>
+	<body>
+	
+		<!-- case 1: 可以使用class加载方式 -->
+		<!-- 
+		<input 
+			class = "easyui-slider" 
+			value = "12"
+			style = "width:300px"
+			data-options = "showTip:true, rule:[0,'|',25,'|',50,'|',75,'|',100]" />
+		-->
+		
+		<!-- case 2: 使用div来创建slider -->
+		<!-- 使用div时value无效 -->
+		<!--
+		<div class="easyui-slider"
+			data-options = "min:10,max:90,step:10,rule:[0,'|',25,'|',50,'|',75,'|',100]"
+			style="width:300px">
+		</div>
+		-->
+		
+		<!-- 以下用js的方式进行调用 -->
+		<div>
+			<div><span>slider demo</span><br/><br/></div>
+			<div><input id="box" style="height:200px"></input></div>
+		</div>
+		
+		<br/><br/><br/>
+		<div style="font-size:12px">
+			<span id="oldValue">Old</span><br/>
+			<span id="newValue"><b>New</b></span><br/>
+			<div>
+				<span id="current">Default</span>
+			</div>
+		</div>
+		
+	</body>
+</html>

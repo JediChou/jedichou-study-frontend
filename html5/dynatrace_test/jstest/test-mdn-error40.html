@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="/lib/jquery-1.12.4.min.js"></script>
+        <script>
+            $('document').ready(function(){
+				"use strict";
+				var obj = Object.freeze({name: "Elsa", score: 157});
+				delete obj.score;  // TypeError
+            });
+        </script>
+    </body>
+</html>

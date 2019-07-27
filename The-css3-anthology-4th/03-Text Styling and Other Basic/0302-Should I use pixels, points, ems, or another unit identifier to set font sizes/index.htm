@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>0302-Should I use pixels, points, ems, or another unit identifier to set font size</title>
+        <style>
+            p { font-family: hack; font-size: 12px; }
+            
+            /* Unit Identifier:  */
+            /* pt -> points      */
+            /* pc -> picas       */
+            /* px -> pixels      */
+            /* em -> ems         */
+            /* ex -> exes        */
+            /* %  -> percentages */
+        </style>
+    </head>
+    <body>
+        <h1>Should I use pixels, points, ems, or another unit identifier to set font size</h1>
+        <p>
+            Here, we've specified that if Verdana is installed on the system, it should be used;
+            otherwise, the browser is instructed to see if Geneva is installed; failling that, the
+            computer will look for Arial, then Helvetica. If none of these fonts are available,
+            the browser will then use that system's default sans-serif font.
+        </p>
+    </body>
+</html>

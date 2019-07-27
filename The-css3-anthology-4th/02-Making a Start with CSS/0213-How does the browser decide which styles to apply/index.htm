@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>How does the browser which styles to apply</title>
+        <style>
+            p { color: #000000; }
+            .message { color: #CCCCCC; }
+            p .message { color: #0000FF; }
+            #content p.message { color: #FF0000; }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <p class="message">
+                This is an important message.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Nino Sanzi|professional golfer|green
+Jedi Zhou|professional tester|blue
+Becky Wu|Mobile design|pink

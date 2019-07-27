@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>progress in the download</title>
+		<style type="text/css">
+			body { font-size:13px }
+			p { padding:0px; margin:0px }
+			.inputbtn {
+				border:solid 1px #ccc;
+				background-color:#eee;
+				line-height:18px;
+				font-size:12px
+			}
+		</style>
+	</head>
+	<body>
+		<p id="pTip">Star download</p>
+		<progress value="0" max="100" id="proDownFile"></progress>
+		<input type="button" value="download"
+			   class="inputbtn" onClick="btn_click();">
+
+		<script type="text/javascript">
+			var intValue = 0;
+			var intTime;
+			var objPro = document.getElementById('proDownFile');
+			var objtip = document.getElementById('pTip');
+
+			// Timer event
+			function Interval_handler() {
+				intValue++;
+				objPro.value = intValue;
+				if(intValue >= objPro.max) {
+					clearInteral(intTimer);
+					objtip.innerHTML = "Download complete!";
+				} else {
+					objtip.innerHTML = "Downloading " + intValue + "%"; 
+				}
+			}
+
+			// event of click download button
+			function btn_click() {
+				intTimer = setInterval(Interval_handler, 50);
+			}
+
+			// Notice
+			// Firefox 34.0.5 - success
+			// Google Chrome browser 40.0.2214.93 m - success
+		</script>
+	</body>
+</html>

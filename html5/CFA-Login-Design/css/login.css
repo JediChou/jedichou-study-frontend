@@ -1,0 +1,156 @@
+﻿@charset "utf-8";
+/*登录框样式*/
+
+
+@media screen and (max-width:1920px){
+	
+	.bg_login{ min-height:1000px;}
+	.login_box{ top:40%; margin-top:-250px;}
+	.gonggao{ bottom:18%; margin-bottom: 50px;width:500px; height:130px; margin-left: -280px; padding-bottom:20px; }
+	title_gg{ position:absolute;bottom:18%; left:50%; margin-bottom: 50px;width:500px; height:130px; margin-left: -280px; padding-bottom:20px; }
+	
+	}
+	
+@media screen and (max-width:1680px){
+	
+	.bg_login{ min-height:900px;}
+	.login_box{ top:40%; margin-top:-250px;}
+	.gonggao{ bottom:20%; margin-bottom: 50px;width:500px; height:130px; margin-left: -280px; padding-bottom:20px;}
+	
+	}	
+	
+@media screen and (max-width:1024px){
+	
+	.bg_login{ min-height:768px;}
+	.login_box{ top:50%; margin-top:-250px;}
+	.gonggao{ bottom:5%; margin-bottom: 0px;width:500px; height:130px; margin-left: -280px;padding-bottom:20px; }
+	}
+	
+@media screen and (max-width:800px){
+	
+	.bg_login{ min-height:1000px;}
+	.login_box{ top:40%; }
+	.gonggao{ bottom:25%; margin-bottom: 0px;width:350px; height:130px; margin-left: -200px; padding-bottom:20px; }
+	
+	}
+
+html{max-height: 100%;overflow: hidden;}
+
+body{ margin:0; padding:0;}
+.bg_login{background: url(../images/bg_login3.jpg)no-repeat #0a0d1c;background-size:cover;position: relative; margin:0px; }
+.login_box{ position: absolute; left:50%;width:350px; height:400px; background:url(../images/login_box_bg2.png) no-repeat; filter:alpha(opacity:30);margin-left: -175px; border:#999 solid 1px;}
+
+.gonggao{position: absolute; left:50%; background:#FFF; filter:alpha(opacity=80); padding:10px 20px; 
+      -moz-opacity:0.8;  
+      -khtml-opacity: 0.8;  
+      opacity: 0.8;  
+	 border:#999 solid 1px;
+	  overflow:hidden;
+	  }
+	  .gonggao table td{  font-size:12px;}
+	  .gonggao table td a{ color:#333;}
+	  .juyi_tt{ width: 300px; height:100px; background:url(../images/juyi_logo.png) no-repeat; margin-left:40px;}
+	  .juyi_tt h3{ margin-left:100px; line-height:100px; font-size:26px;}
+.gonggao ul{ list-style:none;  padding:0;   font-size:12px; }
+.gonggao h3{ padding:0; margin-left:20px; margin-top:5px;}
+.lb-logo{height: 30px;padding-top: 77px;background: url(../images/login_logo_icon3.png) no-repeat center center;line-height: 26px;text-align: center;font-size: 13px;}
+/*登录输入表单*/
+.login_box form p{position:relative;}
+.input_login_txt{height:40px; margin-top:10px; margin-left:30px;}
+.input_login_txt input{position:absolute; height:30px;width:180px;top:23px;left:75px;font-size:14px;border:1;line-height:16px;z-index: 2;}
+.input_span{color:#999;font-size:14px;display:block;position:absolute;top:14px;left:75px;}
+
+.log_kuang{ background:url(../images/login_kuang_bg.png) no-repeat 50px 20px;}
+.link{ margin-left:170px;font-size:14px;}
+.link a{ color:#333;}
+.input_span.hide{display: none;}
+#valid{height: 50px;margin-top: 10px;}
+#valid:after{clear: both;content: ' ';visibility: hidden;}
+#captcha_img{display:block;width:99px;height:49px;float:left;display:block;cursor:pointer;margin-left: 15px;}
+.bg_input_3{display:block;width:131px;height: 49px;padding-left:10px;float:left;background:url("file:///D|/360极速浏览器下载/images/yanzhengma_bg.png") no-repeat;margin-left: 10px;}
+.bg_input_3 input{display:block;width: 130px;height:16px;padding: 17px 0;border:none;background: transparent!important;position: relative;z-index: 2;}
+.input_button{display:block;width:250px;height:40px;color:#fff;border:none;background: url(../images/input_h40x2_bg.png) repeat-x;margin:0 auto;cursor:pointer;
+    font-size: 14px;text-align:center;letter-spacing:5px;margin-top: 10px;}
+.input_button:hover{background: url(../images/input_h40x2_bgs.png) repeat-x 0 -40px;}
+.lb_jump{width: 250px;margin-left: 15px;height: 14px;margin-top: 10px;padding-bottom: 10px;} .lb_jump:after{clear: both;content: ' ';visibility: hidden;}
+.login_a1,.login_a2{font-size:14px;text-decoration:none;color:#333;line-height: 14px;height: 14px;display: block;cursor: pointer;}
+.login_a1:hover,.login_a2:hover{text-decoration:underline;color:#086291;}
+.login_a1,.login_a2{left:22px; bottom:20px;}
+
+
+.erwei{ padding-left:30px; padding-top:10px;}
+.erwei input{ margin-left:70px; border:#CCC solid 1px; width:105px; background:#FFF;}
+.ju_guan{ padding-right:20px; color:#CCC; text-decoration:none;}
+.lala{ padding:5px 0; margin-top:10px;}
+.fl{ display:block; color:#333; padding-top:20px; text-decoration:none;}
+#password{}
+
+.foot{ position:absolute; bottom:0px;background: #000; width:100%; height:50px; text-align:center;  font-size:14px; line-height:15px; color:#999;}
+
+
+.foot_wai{ position:absolute; bottom:0px;background: #000; width:100%; height:30px; text-align:center;  font-size:14px; line-height:30px; color:#999;}
+
+
+/*login error msg box*/
+.login_alt{position: absolute;left: 285px;top: 138px;width: 90px;line-height: 18px;color: #ff0000;padding: 10px;padding-left:20px;background: url("file:///D|/360极速浏览器下载/images/icon/login_msgbox_bg.png") no-repeat;display: none;font-size: 12px;}
+/*find password and register*/
+.register_box{width:280px;margin:8% auto;background:url(file:///D|/360%E6%9E%81%E9%80%9F%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%8B%E8%BD%BD/images/regist_box_bg.png) repeat-y;padding-bottom: 15px;position: relative;}
+.reg_titlecont{color:#086291;text-align:left;padding-left: 30px;line-height: 14px;margin-top: 30px;}
+.reg_list{padding-left: 30px;margin-top: 20px;}
+.reg_list_left{font-size: 16px;color: #086291;height: 16px;line-height: 16px;border-left: 5px solid #086291;padding-left: 5px;}
+.reg_list_right{color: #086291;line-height: 18px;padding-left: 10px;}
+.register_title{height: 14px;line-height: 14px;color: #086291;text-align: center;margin-top: 5px;font-size: 15px;}
+.register_title span{margin-left: 10px;margin-right: 10px;}
+.register_box .email_input{position:relative;width: 250px;height: 50px;background: url("file:///D|/360极速浏览器下载/images/icon/reg_email_bg.png") no-repeat;margin-left: 15px;margin-top: 20px;}
+.register_box .email_input input{font-size: 14px;height: 16px;line-height: 16px;border: none;position: absolute;top: 2px;left: 60px;padding: 15px 0;width: 187px;background: transparent;}
+.register_box .btn_box{width: 250px;height: 40px;margin-left: 15px;margin-top: 10px;}
+.register_box .reg_btn{display: block;width: 120px;height: 40px;border: none;background: url("file:///D|/360极速浏览器下载/images/icon/input_h40x2_bg.png") repeat-x;color: #fff;line-height: 40px;font-size: 14px;}
+.register_box .reg_btn:hover{background: url("file:///D|/360极速浏览器下载/images/icon/input_h40x2_bg.png") repeat-x 0 -40px;}
+.register_box .back{background: url("file:///D|/360极速浏览器下载/images/icon/hui_btn_bg.png") repeat-x 0 -10px;border: 1px solid #d4d4d4;color: #666;}
+.register_box .back:hover{background: url("file:///D|/360极速浏览器下载/images/icon/hui_btn_bg.png") repeat-x 0 -62px;}
+.register_box #ok_btn{margin-left: 10px;}
+.register_box .bg_input_3{position: relative;}
+/*resend email*/
+.confirm_box{padding-bottom: 10px;}
+.confirm_box .cb_item{line-height: 14px;margin-top: 10px;text-align: center;font-size: 12px;}
+.confirm_box .cb_item a{font-size: 12px;color: #086291;}
+.confirm_box .cb_item a:hover{text-decoration: underline;}
+.confirm_box .cb_item .resend_btn{color: #086291;margin-left: 10px;cursor: pointer;}
+.confirm_box .cb_item .resend_btn.disabled{color: #999;cursor: text;}
+.confirm_box .cb_item .time_keeping{color: #ff0000;margin-left: 10px;}
+/*set password*/
+.setpwd_title{margin-top: 10px;}
+.setpwd_title .st_email{font-size: 13px;line-height: 13px;text-align: center;color: #cd0035;word-break: break-all;}
+.setpwd_title .st_text{line-height: 14px;text-align: center;color: #cd0035;margin-top: 10px;}
+.st_pwdform{height: 101px;width: 230px;margin-left: 15px;background: url("file:///D|/360极速浏览器下载/images/icon/reg_input_1x1_bg.png") repeat;margin-top: 20px;padding:0 10px;}
+.st_pwdform p{width: 230px;height: 50px;position: relative;}
+.st_pwdform p input{display: block;position: absolute;width: 100%;height: 16px;padding: 17px 0;left: 0;top: 0;border: none;background: transparent;}
+.st_pwdform p #st_password{border-bottom: 1px solid #086291;}
+.st_pwdform p .input_span{left: 0;}
+.st_pwdform p input{color: #086291;}
+.st_pwdform p label.error{left: 250px;top: 8px;}
+/*error msg*/
+.register_box label.error{display: block;width: 147px;padding-left: 15px;height: 40px;font-size: 12px;position: absolute;line-height: 40px;background: url("file:///D|/360极速浏览器下载/images/icon/login_msgbox_bg.png") no-repeat;}
+.email_input label.error{left: 260px;top: 5px;}
+#valid  label.error{left: 151px;top: 4px;}
+button{cursor:pointer}
+
+
+
+
+.list_lh{ height:180px; overflow:hidden;}
+.list_lh li{ padding:4px 10px;}
+.list_lh li.lieven{ background:#F0F2F3;}
+.list_lh li p{ height:10px; line-height:10px;}
+.list_lh li p a{ float:left; color:#333;}
+.list_lh li p em{ width:80px; font:normal 12px/24px Arial; color:#FF3300; float:right; display:inline-block;}
+.list_lh li p span{ color:#999; float:right;}
+.list_lh li p a.btn_lh{ background:#28BD19; height:17px; line-height:17px; color:#fff; padding:0 5px; margin-top:4px; display:inline-block; float:right;}
+.btn_lh:hover{ color:#fff; text-decoration:none;}
+
+.link_love{ width:650px; margin:0 auto; margin-top:10px;}
+.link_love li{ float:left; margin-left:20px; list-style:none;}
+.link_love li a{ text-decoration:none;}
+.he_me{ margin-top:8px;}
+
+.clear{clear:both;height:0;overflow:hidden;} 

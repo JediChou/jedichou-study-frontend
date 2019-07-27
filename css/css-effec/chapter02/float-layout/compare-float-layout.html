@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=zh>
+    <head>
+        <title>Compare float layout</title>
+        <style>
+            .divdemo {
+                border: 2px;
+                border-style: 2px solid gray;
+                background-color:azure;
+            }
+            .sub-title {
+                font-family: Hack, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="divdemo">
+            <span class="sub-title">non-float layout</span>
+            <div><p>小雅：這個故事好難聽。</p></div>
+            <div><p>火神：鬼要你聽呀！</p></div>
+        </div>
+        <br/>
+        <div class="divdemo">
+            <span class="sub-title">float layout</span>
+            <div style="float:left"><p>小雅：這個故事好難聽。</p></div>
+            <div style="float:left"><p>火神：鬼要你聽呀！</p></div>
+        </div>
+    </body>
+</html>

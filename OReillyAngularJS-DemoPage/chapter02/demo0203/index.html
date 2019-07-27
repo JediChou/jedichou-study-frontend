@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="InitTitle">{{page.title}}</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="display-3" ng-controller="InitTitle">{{page.title}}</h1>
+            <hr>
+        </header>
+        <section ng-controller="displayStudent">
+            <ul ng-model="students">
+                <li ng-repeat="girl in students">
+                    {{girl.name}}
+                </li>
+            </ul>
+            <button  ng-click="addNew()">insert new record</button>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

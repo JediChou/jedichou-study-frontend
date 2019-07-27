@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="initTitle">{{page.title}}</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="display-3" ng-controller="initTitle">{{page.title}} - 使用ng-href</h1>
+        </header>
+        <section>
+            <div class="panel panel-success">
+                <div class="panel-heading display-4">Link list</div>
+                <table class="table" ng-controller="displayLinkList">
+                    <tr>
+                        <th>ID</th>
+                        <th>Link Name</th>
+                        <th>Link address</th>
+                        <th>Operation</th>
+                    </tr>
+                    <tr ng-repeat="link in links"
+                        ng-click="selectLink($index)"
+                        ng-class="{selected: $index==selectedRow}">
+                        <td>{{link.id}}</td>
+                        <td>{{link.name}}</td>
+                        <td><a ng-href="http://{{link.address}}">{{link.address}}</a></td>
+                        <td>
+                            <button type="button" class="btn btn-info">Primary</button>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                            <button type="button" class="btn btn-success">Success</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

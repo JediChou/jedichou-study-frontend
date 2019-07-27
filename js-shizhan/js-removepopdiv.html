@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<script type="text/javascript" src="./jquery.js"></script>
+		<script type="text/javascript>
+
+			var DivWindow = function(
+				popup, popup_drag, popup_exit, exitButton) {
+				this.popup = popup;
+				this.height = varheight;
+				this.width = varwidth;
+				this.popup_exit = popup_exit;
+				this.exitButton = exitButton;
+				this.zindex = zindex;
+				this.init = function() {
+					this.popupShow();
+					this.startDrag();
+					this.setCommond();
+					DivWindow.ArrayW.push(document.getElementById(this.popup));
+				};
+			};
+
+			new DivWindow('popup', 'popup_drag', 'popup_exit', 'exitButton', '500', '700', 4);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

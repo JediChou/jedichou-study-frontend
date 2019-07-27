@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>How to use novalidate property</title>
+		<link href="./css4.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body>
+		<form id="frmTmp" novalidate="true">
+			<fieldset>
+				<legend>user login</legend>
+				<p>User:
+					<input name="txtUserName" id="txtUserName"
+						   type="text" class="inputtxt"
+						   pattern="^[a-zA-Z\w{5,7}$]" required="true"/> *
+				</p>
+				<p>Password:
+					<input name="txtPassWord" id="txtPassWord"
+						   type="password" class="inputtxt"
+						   pattern="^[a-zA-Z\w{5,7}$]" required="true"/> *
+				</p>
+				<p class="p_center">
+					<input name="frmSubmit" type="submit" class="inputbtn" value="Submit" />
+					<input name="frmReset" type="reset" class="inputbtn" value="cancle" />
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

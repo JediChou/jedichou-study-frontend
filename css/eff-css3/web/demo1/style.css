@@ -1,0 +1,12 @@
+
+/* 使用浮動佈局 */
+.article {
+	float: left;
+	background-color: ghostwhite;
+	font-size: 16px;
+	margin: 2px;
+	padding: 10px;
+	height: 100px;
+	width: 300px;
+	visibility: visible;
+}

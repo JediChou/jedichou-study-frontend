@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>il18n demo</title>
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/jquery.i18n.properties.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <div>
+                <label id="label_username"></label>
+                <input type="text" id="username"></input>
+            </div>
+            <div>
+                <label id="label_password"></label>
+                <input type="password" id="password"></input>
+            </div>
+            <input type="button" id="button_login"/>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+//            jQuery.i18n.properties({
+//                name : 'strings', //资源文件名称
+//                path : '/il18n/', //资源文件路径
+//                mode : 'map', //用Map的方式使用资源文件中的值
+//                language : lang,
+//                callback : function() {//加载成功后设置显示内容
+//                    $('#button-login').html($.i18n.prop('Login'));
+//                    $('#label-username').html($.i18n.prop('User Name'));
+//                    $('#label-password').html($.i18n.prop('Password'));
+//                }
+//            });
+            $.cookie("lang", "en", { path: "/"});
+        });
+    </script>
+</body>
+</html>

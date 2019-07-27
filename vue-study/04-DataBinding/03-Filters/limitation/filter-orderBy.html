@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>filter orderBy of Vue.js</title>
+    <link rel="stylesheet" href="../../../css/site.css" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <!-- case 1 -->
+        <div class="content-article">
+            <article>
+                <header><b>没有任何排序</b></header>
+                <div>
+                    <table>
+                        <tr>
+                            <td>书名</td>
+                            <td>价格</td>
+                            <td>评价数</td>
+                            <td>出版社</td>
+                        </tr>
+                        <tr v-for="book in books">
+                            <td>{{book.name}}</td>
+                            <td>{{book.price}}</td>
+                            <td>{{book.rate}}</td>
+                            <td>{{book.publisher}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+        <!-- case 2 -->
+        <div class="content-article">
+            <article>
+                <header>按照名称排序</header>
+                <div>
+                    <table>
+                        <tr>
+                            <td>书名</td>
+                            <td>价格</td>
+                            <td>评价数</td>
+                            <td>出版社</td>
+                        </tr>
+                        <tr v-for="book in books | orderBy 'name'">
+                            <td>{{book.name}}</td>
+                            <td>{{book.price}}</td>
+                            <td>{{book.rate}}</td>
+                            <td>{{book.publisher}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+
+            <br/>
+
+            <article>
+                <header>按照价格排序</header>
+                <div>
+                    <table>
+                        <tr>
+                            <td>书名</td>
+                            <td>价格</td>
+                            <td>评价数</td>
+                            <td>出版社</td>
+                        </tr>
+                        <tr v-for="book in books | orderBy 'price'">
+                            <td>{{book.name}}</td>
+                            <td>{{book.price}}</td>
+                            <td>{{book.rate}}</td>
+                            <td>{{book.publisher}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+        <div class="content-article">
+            <article>
+                <header>按价格、评价数排序</header>
+                <div>
+                    <table>
+                        <tr>
+                            <td>书名</td>
+                            <td>价格</td>
+                            <td>评价数</td>
+                            <td>出版社</td>
+                        </tr>
+                        <tr v-for="book in books | orderBy 'price' 'rate'">
+                            <td>{{book.name}}</td>
+                            <td>{{book.price}}</td>
+                            <td>{{book.rate}}</td>
+                            <td>{{book.publisher}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </div>
+
+    </div>
+    <script>
+        var model = {
+            books: [
+                {name:'JavaScript高级程序设计', price:78.20, rate:2.5, publisher:'wrox'},
+                {name:'JavaScript权威指南', price:109.80, rate:0.97, publisher:'oreilly'},
+                {name:'JavaScript DOM编程语言艺术', price:38.70, rate:2.5, publisher:'wrox'},
+                {name:'JavaScript语言精粹', price:38.70, rate:0.36, publisher:'oreilly'},
+                {name:'Web设计与前端开发秘籍:HTML CSS', price:110.20, rate:0.14, publisher:'Amazon'},
+                {name:'JavaScript设计模式', price:46.60, rate:2.5, publisher:'中国水利出版社'},
+                {name:'JavaScript从入门到精通', price: 55.10, rate:0.14, publisher:'清华大学出版社'},
+                {name:'你不知道的JavaScript', price:38.70, rate:2.5, publisher:'人民邮电出版社'},
+                {name:'高性能JavaScript', price:52.50, rate:0.08, publisher:'oreilly'}
+            ]
+        };
+        var vm = new Vue({
+            el: '#app',
+            data: model
+        });
+    </script>
+</body>
+</html>

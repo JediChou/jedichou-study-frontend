@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>script control element - <details> </title>
+	</head>
+	<body>
+		<span onClick="span1_click();">footnote</span>
+		<details id="detalis1">
+			The page generate at 2011-03-17
+		</details>
+		<script>
+			function span1_click() {
+				var objD = document.getElementById("detalis1");
+				var attD = objD.getAttribute("open");
+				
+				if(attD != "open") {
+					objD.setAttribute("open", "open");
+				} else {
+					objD.removeAttribute("open");
+				}
+			}
+		</script>
+	</body>
+</html>	

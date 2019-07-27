@@ -1,0 +1,7 @@
+p {
+    color: #0000FF;
+}
+
+.sidebar>p {
+    color: deeppink;
+}

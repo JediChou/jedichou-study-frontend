@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>input of range type</title>
+		<link href="./css4.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" language="javascript" src="./js4.js">
+		</script>
+	</head>
+	<body>
+		<form id="frmTmp">
+			<fieldset>
+				<legend>Pls pick color value:</legend>
+				<span id="spnColor">
+				<input id="txtR" type=range value=0 min=0 max=255 onChange="setSpnColor()">
+				<input id="txtG" type=range value=0 min=0 max=255 onChange="setSpnColor()">
+				<input id="txtB" type=range value=0 min=0 max=255 onChange="setSpnColor()">
+				</span>
+				<div id="spanPrev"></div>
+				<p id="pColor">rgb(0,0,0)</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

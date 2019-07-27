@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>demo0201 How to use detail tag</title>
+		<style type = "text/css">
+			body { font-size: 12px}
+			span { font-weight: blod}
+			details {
+				overflow: hidden;
+				height: 0;
+				padding-left: 200px;
+				position: relative;
+				display: block;
+			}
+			details[open] {
+				height: auto;				
+			}
+		</style>
+	</head>
+	<body>
+		<span>Hidden page footbooter</span>
+		<details>
+			The page generate at 2011-3-17
+		</details>
+		
+		<details open="open">
+			The page generate at 2011-4-17
+		</details>
+	</body>
+</html>

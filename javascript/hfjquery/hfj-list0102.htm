@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang=zh-cn>
+    <head>
+        <title>First jQuery Task</title>
+        <style>
+            /*
+               这个CSS选择器将嵌套图像的display属
+               性改为“none”，使页面第一次加载时这
+               个图像不可见。
+             */
+            a:link img, a:visited img {
+                display: none;
+            }
+            
+            /*
+               用户把鼠标停留在锚标记上时或者单击这
+               个锚标记时，img元素的display属性会
+               变为“block”。然后图像就会立即出现。
+             */
+            a:hover img, a:active img {
+                display: block;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        </style>
+        <script src="js/jquery-1.12.0.js"></script>
+    </head>
+    <body>
+       <div id="showfriend">
+           <!-- 
+               锚标记在CSS中设置了“hover“
+               和“active”状态。用户将鼠标停留在链
+               接上时，图像就会出现。
+           -->
+           <a href="#">Our Furry Friends Need Your help
+               <!-- 
+                   图片嵌套在锚标记中。用户单击这个
+                   锚标记中的链接之前图片不应出现。
+               -->
+               <img src = "">
+           </a>
+       </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Create a calendar</title>
+    <script type="text/javascript">
+
+        // function montharr
+        function montharr(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11) {
+            this[0] = m0; this[1] = m1; this[2] = m2; this[3] = m3;
+            this[4] = m4; this[5] = m5; this[6] = m6; this[7] = m7;
+            this[8] = m8; this[9] = m9; this[10] = m10; this[11] = m11;
+        }
+
+        // function calendar
+        // todo: a foolish example.
+        function calendar() {
+            var m;
+            var today = new Date();
+            var thisDay;
+            var monthDays = new montharr(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+            year = today.getFullYear();
+            thisDay = today.getDate();
+            if( (year % 4 == 0) && (year % 100 != 0) && (year % 400 == 0)) { monthDays[1] = 29; }
+            nDays = monthDays[today.getMonth()];
+            firstDay = today;
+            firstDay.setDate(1);
+            testMe = firstDay.getDate();
+            if(testMe == 2) firstDay.setDate(0);
+            startDay = firstDay.getDay();
+
+            document.write(
+                '<table border="1" cellspacing="0" cellpadding="1" align="center" bgcolor="red"' + _
+                '<tr><td><table border="0" cellspacing="1" cellpadding="1" bgcolor="#ffeeee">'_
+            );
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

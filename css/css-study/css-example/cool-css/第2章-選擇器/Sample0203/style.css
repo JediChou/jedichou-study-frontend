@@ -1,0 +1,11 @@
+h3:target {
+    color: maroon;
+    background: #FFA;
+}
+
+*:target {
+    color: maroon;
+    background: #FFA;
+}
+
+/* TODO - 未生效呀 */

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="/lib/jquery-1.12.4.min.js"></script>
+        <script>
+            $('document').ready( function(){
+                String.fromCodePoint('_');      // RangeError
+                String.fromCodePoint(Infinity); // RangeError
+                String.fromCodePoint(-1);       // RangeError
+                String.fromCodePoint(3.14);     // RangeError
+                String.fromCodePoint(3e-2);     // RangeError
+                String.fromCodePoint(NaN);      // RangeError
+            });
+        </script>
+    </body>
+</html>

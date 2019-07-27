@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="InitTitle">{{title.pageTitle}}</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="display-4" ng-controller="InitTitle">{{title.pageTitle}}</h1>
+        </header>
+        <section>
+            <div style="padding:20px">
+                <form ng-controller="StartUpController" ng-submit="requestFunding()">
+                    Starting: &nbsp;
+                    <input ng-change="computeNeeded()" ng-model="funding.startingEstimate">
+                    &nbsp;&nbsp; Recommendation: {{funding.needed}}
+                    <button>Fund my startup!</button>
+                    <button ng-click="reset()">Reset</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js - Interpolations Text - Demo 1</title>
+    <script src="../../lib/vue.js"></script>
+    <link href="../../css/site.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- View -->
+    <div class="content">
+        <div id="app">
+            <span>This will be change: {{msg}}</span>
+        </div>
+        <div id="app2">
+            <span>This will be change: {{* msg2}}</span>
+        </div>
+    </div>
+
+    <script>
+
+        // Jedi: 显然一个HTML可以有多个ViewModel
+
+        /**********************************************************************
+         * ViewModel默认都是双向绑定, 所以不加vm.$data === data
+         * 在View中未指定`*`, 故View的值为随着绑定值一直变更!
+         **********************************************************************/
+        var data = {msg: 'Welcome to Vue.js'};
+        var vm = new Vue({
+            el: '#app',
+            data: data
+        });
+        data.msg = 'msg value is changed';
+        data.msg = 'msg value change again';
+
+        /**********************************************************************
+         * 在View中已指定了`*`, 故View的值只会显示第一次绑定的值, 后续的值都忽略了!
+         * 这点可以用在UI的布局上吗?
+         **********************************************************************/
+        var data2 = {msg2: 'Initialize'};
+        var vm2 = new Vue({
+            el: '#app2',
+            data: data2
+        });
+        data2.msg2 = 'Changed';
+        data2.msg2 = 'Change again';
+
+    </script>
+
+</body>
+</html>

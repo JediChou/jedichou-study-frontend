@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "HelloWorld.dart.js",
+  "sourceRoot": "",
+  "sources": ["HelloWorld.dart","../../../../../tool/dart/dart-sdk/lib/_internal/compiler/js_lib/internal_patch.dart","../../../../../tool/dart/dart-sdk/lib/_internal/compiler/js_lib/js_primitives.dart"],
+  "names": ["main","printToConsole","printString"],
+  "mappings": "A;A;;;;;;;;;;;;;;;;A;;;;;;;;A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;A;;;A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;A;;QAAAA;ICiBEC;ADjBKD;GAAuBA;;;uD;;eEoB9BE;;;AAIIA;;;;AAOAA;;;AAKAA;;;AAMAA;;;GAOJA;;uC;;;0C;;;;;A;A;;;;;;;;;;;;;A;A;A;A;A;A;A;;;;;;;;;;;;;;;;;A;;;;;;;;A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;C;A;;;;;;;;;;;;;;;;;;;;;;;;;A"
+}

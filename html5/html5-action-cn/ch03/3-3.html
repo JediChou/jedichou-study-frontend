@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>How to use script tags</title>
+		<link href="./css3.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" async="true">
+			function btn_click() {
+				var strTxt = document.getElementById("txtContent").value;
+				var strDiv = document.getElementById("divShow");
+				strDiv.style.display="block";
+				strDiv.innerHTML="You input character is: " + strTxt;
+			}
+		</script>
+		<noscript>Your browser does not support JavaScript</noscript>
+	</head>
+	<body>
+		<input type="text" id="txtContent" class="inputtxt" />
+		<input type="button" value="Click me" class="inputbtn" onClick="btn_click()">
+		<div id="divShow" class="divShow"></div>
+	</body>
+</html>
+

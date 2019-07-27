@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<style>
+* {margin:0;padding:0;font-size:12px;}
+html,body {height:100%;width:100%;}
+#content {background:#f8f8f8;padding:30px;height:100%;}
+#content a {font-size:30px;color:#369;font-weight:700;}
+#alert {border:1px solid #369;width:300px;height:150px;background:#e2ecf5;z-index:1000;position:absolute;display:none;}
+#alert h4 {height:20px;background:#369;color:#fff;padding:5px 0 0 5px;}
+#alert h4 span {float:left;}
+#alert h4 span#close {margin-left:210px;font-weight:500;cursor:pointer;}
+#alert p {padding:12px 0 0 30px;}
+#alert p input {width:200px;margin-left:20px;height:40px;}
+#alert p input.myinp {border:1px solid #ccc;height:20px;}
+#alert p input.sub {width:60px;margin-left:30px;height:20px;}
+.sub {width:60px;margin-left:30px;height:20px;}
+</style>
+<script type="text/javascript">
+
+function aa(){
+var myAlert = document.getElementById("alert");
+myAlert.style.display = "block";
+myAlert.style.position = "absolute";
+myAlert.style.top = "50%";
+myAlert.style.left = "50%";
+myAlert.style.marginTop = "-75px";
+myAlert.style.marginLeft = "-150px";
+
+mybg = document.createElement("div");
+mybg.setAttribute("id","mybg");
+mybg.style.background = "#000";
+mybg.style.width = "100%";
+mybg.style.height = "100%";
+mybg.style.position = "absolute";
+mybg.style.top = "0";
+mybg.style.left = "0";
+mybg.style.zIndex = "500";
+mybg.style.opacity = "0.3";
+mybg.style.filter = "Alpha(opacity=30)";
+document.body.appendChild(mybg);
+
+document.body.style.overflow = "hidden";
+}
+
+function can(){
+var myAlert = document.getElementById("alert");
+var myCancle= document.getElementById("cancle");
+mybg = document.createElement("div");
+myAlert.style.display = "none";
+mybg.style.display = "none";
+}
+
+
+function subm(){
+var q = document.getElementById("q");
+alert(q.value);
+}
+
+</script>
+</HEAD>
+
+<BODY>
+<input type="button" id="bt" value="ok" onclick="aa();">
+<div id="alert">
+<h4><span>aaaaaaa</span><span id="close" onclick="can();">??</span></h4>
+<p><label>bbbbbbb:</label></p>
+<p><input type="textarea"  id="q" name="w"  cols="30" rows="3"/></p>
+
+<p><input type="button" value="ÚÌ?" onclick="subm();" class="sub" /><input type="button" id="cancle" value="¨ú®ø" class="sub" onclick="can();" /></p>
+</div>
+</BODY>
+</HTML> 

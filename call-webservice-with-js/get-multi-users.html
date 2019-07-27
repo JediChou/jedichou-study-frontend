@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8" />
+    <title>Get a string from local web service</title>
+    <script type="text/javascript" src="jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        function CallWebService() {
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "WebService1.asmx/GetMultiUsers",
+                data: "{}",
+                dataType: "json",
+                success: function (result) {
+                    
+                    // output to js console
+                    $.each(result.d, function(index, data) {
+                        console.log(index + ": " + "Name->" + data.Name + ", Age->" + data.Age);
+                    });
+
+                    // modify page
+                    var output = "";
+                    $.each(result.d, function (index, data) {
+                        output += index + ": " + "Name->" + data.Name + ", Age->" + data.Age + "<br/>";
+                    });
+                    $('#result').html(output);
+                }
+            });
+        }
+    </script>
+</head>
+    <body>
+        <div>
+            <span>Click button to get webservice result</span>
+            <div style="height: 50px;border: 1px #ccc">
+                <span id="result"></span>
+            </div>
+        </div>
+        <div>
+            <input id="sender" type="button" value="click me" onclick="javascript:CallWebService();" />
+        </div>
+    </body>
+</html>

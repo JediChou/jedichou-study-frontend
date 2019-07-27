@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudo-class Selectors, nth-child</title>
+        <style>
+            /* odd -> 奇数行 */
+            tr:nth-child(odd) td {
+                background-color: #f0e9c5;
+                border: 1px;
+                border-color: #f0e9c5;
+            }
+            
+            /* 2n -> 偶数行 */
+            tr:nth-child(2n) td {
+                background-color: #000000;
+                border: 1px;
+                border-color: #f0e9c5;
+            }
+            
+            /* 所有的td都是用hack字体，颜色为红色 */
+            td {
+                font-family: hack;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>1st td</td>
+                <td>2nd td</td>
+                <td>3rd td</td>
+            </tr>
+            <tr>
+                <td>4th td</td>
+                <td>5th td</td>
+                <td>6th td</td>
+            </tr>
+            <tr>
+                <td>7th td</td>
+                <td>8th td</td>
+                <td>9th td</td>
+            </tr>
+        </table>
+    </body>
+</html>

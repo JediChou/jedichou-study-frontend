@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script type="text/javascript" src="./jquery.js"></script>
+	</head>
+
+	<body>
+		<div id="highlightdiv"></div>
+		<script text="text/javascript">
+			if($('#highlightdiv')) {
+				// $('#highlightdiv').css('background-color', '#FF0000');
+				// $('#highlightdiv').css('border', '16px solid #FE0037');
+				
+				// Or use this method.
+				$('#highlightdiv').css({
+					'background-color': '#FF0000',
+					'border': '30px solid #FE0037'
+				});
+			} else {
+				document.write('does not find div by id.');
+			}
+		</script>
+	</body>
+</html>

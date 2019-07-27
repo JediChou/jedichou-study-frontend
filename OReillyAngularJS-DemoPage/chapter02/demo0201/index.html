@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>demo 0201 - data binding</title>
+    <link rel="stylesheet" href="../modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="display-4">AngularJS Demo - Data Binding</h1>
+        </header>
+        <section>
+            <div style="padding:20px">
+                <form ng-controller="StartUpController">
+                    Starting: &nbsp;
+                    <input ng-change="computeNeeded()" ng-model="funding.startingEstimate">
+                    &nbsp;&nbsp; Recommendation: {{funding.needed}}
+                </form>
+            </div>
+        </section>
+    </div>
+    <script src="../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

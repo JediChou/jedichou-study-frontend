@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Get by Tag</title>
+	</head>
+	<body>
+		<a href="http://www.yahoo.com">Yahoo</a> <br/>
+		<a href="http://www.google.com">google</a>
+		<p id = "output"></p>
+
+		<script language = "javascript">
+			var links = document.getElementsByTagName("a");
+			var output = document.getElementById("output");
+			var links_size = links.length;
+		
+			for(var i=0; i < links_size; i++)
+				output.innerHTML += links[i] + ", ";
+		</script>
+	</body>
+</html>
+

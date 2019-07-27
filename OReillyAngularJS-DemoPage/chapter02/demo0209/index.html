@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="InitTitle">{{title}}</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="display-3" ng-controller="InitTitle">{{title}}</h1>
+        </header>
+        <section>
+            <div ng-controller="OutPutController">
+                <div><span class="display-4">输出的数字为：{{computer()/10 * 10}}</span></div>
+                <table>
+                    <tr ng-repeat="elt in collections">
+                        <td ng-class="{highlight: $index % 2}">{{elt.name}}, index: {{$index}}</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

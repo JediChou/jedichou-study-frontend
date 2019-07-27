@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="InitTitle">{{page.title}}</title>
+    <link rel="stylesheet" href="../../modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="display-3" ng-controller="InitTitle">{{page.title}}</h1>
+            <hr>
+        </header>
+        <section>
+            <div style="padding: 20px;" ng-controller="DeathrayMenuController">
+                <button ng-click="toggleMenu()">Toggle Menu</button>
+                <ul ng-show='menuState.show'>
+                    <li class="menu-disabled-{{isDisabled}}" ng-click="stun()">Stun</li>
+                    <li ng-click="disintegrate()">disintegrate</li>
+                    <li ng-click="erase()">erase</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="../../modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

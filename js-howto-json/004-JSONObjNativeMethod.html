@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h2>Create a JSON object from string</h2>
+        <hr />
+        <p>
+            Employee I: <span id="bill_fname"></span> <span id="bill_lname"></span><br />
+            List length: <span id="listlength"></span><br />
+        </p>
+        
+        <script type = "text/javascript">
+            var txt = '{ "employees" : [' +
+                      ' { "firstName" : "Jedi", "lastName" : "Chou" },' +
+                      ' { "firstName" : "Becky", "lastName" : "Wu" },' +
+                      ' { "firstName" : "Kiwi", "lastName" : "Chou" } ]}';
+            
+            var obj = JSON.parse(txt);
+            
+            // Notice! you need use obj.name to access property.
+            document.getElementById("bill_fname").innerHTML = obj.employees[0].firstName;
+            document.getElementById("bill_lname").innerHTML = obj.employees[0].lastName;
+            document.getElementById("listlength").innerHTML = obj.employees.length;
+        </script>
+    </body>
+</html>

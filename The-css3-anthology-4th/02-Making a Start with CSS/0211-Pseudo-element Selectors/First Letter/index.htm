@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudo-element Selectors, First Letter</title>
+        <style>
+            /* 最为原始的方式 */
+            /*.wrapper .firstletter  {
+                font-size: 200%;
+                font-weight: bold;
+            }*/
+            
+            .wrapper::first-letter  {
+                font-size: 200%;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!--<p><span class="firstletter">T</span>his is some text within a div with a class of wrapper.</p>-->
+            <p>This is some text within a div with a class of wrapper.</p>
+        </div>
+    </body>
+</html>

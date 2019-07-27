@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Custom filter with multi-parameters</title>
+    <link rel="stylesheet" href="../../../css/site.css" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-text="message | reverse 'before' 'after'"></p>
+    </div>
+    <script>
+        Vue.filter('reverse', function(val, begin, end){
+            return [begin,'---',val.split('').reverse().join(''),'---',end].join('');
+        });
+        new Vue({
+            el: '#app',
+            data: {message: 'May the force with you'}
+        });
+    </script>
+</body>
+</html>

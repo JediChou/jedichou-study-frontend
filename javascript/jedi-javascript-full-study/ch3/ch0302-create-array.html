@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Use array's object property</title>
+</head>
+<body>
+    <hr align="left" style="width: 610px">
+    <div style="background-color: #9ACDCD; width: 610px; height: 300px;">
+        <script type="text/javascript">
+            var arr = new Array(1,2,3,4,5,6,7,8,9);
+            with(document)
+            {
+                // output 1
+                write("array's length: " + arr.length);
+
+                // output 2
+                write("<br>Add new element");
+                arr[arr.length] = arr.length + 1;
+                write("<br>length of after add: " + arr.length);
+
+                // output 3
+                write("<br>Ji shu element: ")
+                for(var i = 0; i < arr.length; i += 2) {
+                    write(arr[i] + ",");
+                }
+
+                // output 4
+                write("<br>Ou shu elements: ");
+                for( var i = 1; i < arr.length; i+= 2) {
+                    write(arr[i] + ",");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

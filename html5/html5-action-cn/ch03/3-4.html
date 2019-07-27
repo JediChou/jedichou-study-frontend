@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>How to use ol tag</title>
+		<link href="./css3.css" rel=stylesheet type=text/css>
+		<script type="text/javascript" async=true>
+			function btn_click() {
+				var strNum = document.getElementById("txtOrderNum").value;
+				var strDiv = document.getElementById("olList");
+				strDiv.setAttribute("start", strNum);
+			}
+		</script>
+	</head>
+	<body>
+		<h5>Rank of books</h5>
+		<ol id="olList">
+			<li>Computer</li>
+			<li>Social</li>
+			<li>Artist</li>
+		</ol>
+
+		<h5>Config start value</h5>
+		<input type=text id="txtOrderNum" class="inputtxt" stype="width:60px" />
+		<input type=button value="yes" class="inputbtn" onClick="btn_click();" />
+	</body>
+</html>

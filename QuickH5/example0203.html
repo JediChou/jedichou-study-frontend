@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>Html5 Demo - 0203 Canvas</title>
+        <style>
+            body { background-color: black; }
+            canvas { background-color: white; }
+        </style>
+        <script>
+            window.onload = function() {
+                try {
+                    var canvasObj = document.getElementById("can"); // 獲得頁面的canvas對象
+                    var ctx = canvasObj.getContext("2d");           // 只支持2d
+                    ctx.beginPath();                                // 確定畫圖的開始點
+                    
+                    ctx.translate(50, 50);                          // 此即為平移
+                    
+                    ctx.moveTo(50, 50);                             // 確定畫圖的開始點，x軸與y軸
+                    ctx.lineTo(150, 50);                            // 表示劃線的結束點
+                    ctx.lineTo(150, 100);
+                    ctx.lineTo(50, 100);
+                    ctx.lineTo(50, 50);
+                    ctx.stroke();                                   // 表示繪製完成
+                } catch(e) {
+                    alert("錯誤，當前的瀏覽器不支持本頁操作");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="can" with="300" height="300">
+            當前瀏覽器不支持Canvas，請更換瀏覽器
+        </canvas>
+    </body>
+</html>
+
+<!-- Reference: 網易雲課堂-快速掌握HTML5-第2課 -->
+<!-- Description: 演示平移效果               -->
+<!-- Jedi Chou, 2016.3.4, 16:42            -->

@@ -1,0 +1,24 @@
+.panel-heading {
+    /*margin: 5px;*/
+    padding: 10px;
+    background-color: #0074d9;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.panel {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    position: relative;
+    margin: 1rem -1rem;
+    border: solid #0074d9;
+}
+
+.selected {
+    background-color: #0074d9;
+    color: white;
+}

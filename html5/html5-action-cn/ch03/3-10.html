@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>contenteditable property</title>
+		<link href="./css3.css" rel="stylesheet" type=text/css>
+		<script type="text/javascript">
+			function btn_click() {
+				var strArt = document.getElementById("art_0").innerHTML;
+				var objArt = document.getElementById("art_1");
+				objArt.innerHTML='<b>After editor</b>' + strArt;
+			}
+		</script>
+	</head>
+	<body>
+		<h5>contenteditable property of element content</h5>
+		<article contenteditable="true" class="p3_10" id="art_0">
+			this pragrahp can edtied!
+		</article>
+		<article class="p3_10" id="art_1">
+		</article>
+		<input type=button value="save" class="inputbtn" onClick="btn_click()">
+	</body>
+</html>

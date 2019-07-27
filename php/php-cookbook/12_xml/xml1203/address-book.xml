@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<address-book>
+    <person id="1">
+        <!-- David Sklar -->
+        <firstname>David</firstname>
+        <lastname>Skilar</lastname>
+        <city>New York</city>
+        <state>NY</state>
+        <email>sklar@php.net</email>
+    </person>
+    
+    <person id="2">
+        <!-- Adam Trachtenberg -->
+        <firstname>Adam</firstname>
+        <lastname>Trachtenberg</lastname>
+        <city>San Francisco</city>
+        <state>CA</state>
+        <emal>amt@php.net</emal>
+    </person>
+</address-book>

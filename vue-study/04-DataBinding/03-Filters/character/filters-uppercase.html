@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>filters: uppercase</title>
+    <link href="../../../css/site.css" rel="stylesheet" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       <article>
+           <header>Girls</header>
+           <div class="girls-list">
+               <ul>
+                   <li v-for="girl in girls">
+                       <span>{{girl | uppercase}}</span>
+                   </li>
+               </ul>
+           </div>
+       </article>
+    </div>
+
+    <script>
+        // Reference: https://segmentfault.com/a/1190000006998227#articleHeader18
+
+        var data = { girls: ['Sarah', 'Winnie', 'Sammy'] };  // Model
+        var vm = new Vue({  // ViewModel
+            el: '#app',
+            data: data
+        });
+    </script>
+</body>
+</html>

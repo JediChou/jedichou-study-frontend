@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>limitBy filter of Vue.js</title>
+    <link rel="stylesheet" href="../../../css/site.css" type="text/css">
+    <script src="../../../lib/vue.js"></script>
+</head>
+<body>
+    <!-- view -->
+    <div id="app">
+
+        <h1>三种情况</h1>
+        <hr/>
+
+        <div class="content-article">
+            <article>
+                <header>第1种</header>
+                <p>limitBy 0: 不显示任何东西</p>
+                <ul>
+                    <li v-for="elt in os | limitBy 0">
+                        <span>{{elt}}</span>
+                    </li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="content-article">
+            <article>
+                <header>第2种</header>
+                <p>limitBy 4: 显示4条记录</p>
+                <ul>
+                    <li v-for="elt in os | limitBy 4">
+                        <span>{{elt}}</span>
+                    </li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="content-article">
+            <article>
+                <header>第3种</header>
+                <p>limitBy 2 4: 显示记录2,记录3</p>
+                <li v-for="elt in os | limitBy 2 4">
+                    <span>{{elt}}</span>
+                </li>
+            </article>
+        </div>
+
+    </div>
+    <script>
+        // model
+        var model = { os: [
+            'MacOS Lion', 'MacOS Series',
+            'CentOS', 'Ubuntu', 'Lint Linux', 'SUSE Linux',
+            'Windows XP', 'Windows 2000', 'Windows 2003'
+        ]};
+
+        // view-model
+        var vm = new Vue({
+            el: '#app',
+            data: model,
+        });
+    </script>
+</body>
+</html>
