@@ -1,4 +1,5 @@
 var assert = require('assert');
+var operator = require('./operations.js');
 
 describe('Array', function() {
   describe('#indexOf()', function() {
@@ -22,5 +23,23 @@ describe('简单的断言示例', function(){
       assert.equal(str1, "jedichou");
     });
     
+  });
+});
+
+describe('测试Operations', function(){
+  describe('add方法', function(){
+    
+    var op = new operator();
+
+    it ('整数相加', function(){
+      assert.equal(5, op.add(2, 3));
+      assert.equal(5, op.add(3, 2));
+    });
+
+    it('字符串相加', function(){
+      assert.equal('jedichou', op.add('jedi', 'chou'));
+      assert.equal('jedichou', op.add('jedic', 'hou'));
+    });
+
   });
 });
