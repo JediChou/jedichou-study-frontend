@@ -7,5 +7,3 @@ var stringMatches = strObj.match('username');
 console.log(stringMatches);
 var patternMatches = strObj.match( /[^&]+/g );
 console.log(patternMatches);
-
-// TODO: Jedi, need more excise for String.match()
