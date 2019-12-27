@@ -7,4 +7,5 @@ var orderedCollection = new Array();
 	orderedCollection[0] = 'sunday';
 	orderedCollection[1] = 'monday';
 	orderedCollection[2] = 'tuesday';
-console.log(orderedCollection.toString());
+console.log(orderedCollection.toString())
+console.log(orderedCollection.join(','))
