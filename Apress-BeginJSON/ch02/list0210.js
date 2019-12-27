@@ -12,3 +12,12 @@ var internalObject = new Array();
 
 // outputs our array as expected
 console.log(externalObject.child);
+
+// Jedi add other comments
+console.log(typeof externalObject.child);
+console.log(externalObject.child instanceof Array);
+console.log(externalObject.child.length);
+console.log(externalObject.child[0]);
+console.log(externalObject.child[1]);
+console.log(externalObject.child[2]);
+console.log(externalObject.child.toString());
