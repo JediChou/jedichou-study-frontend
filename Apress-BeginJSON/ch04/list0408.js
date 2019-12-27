@@ -3,16 +3,17 @@
 //   examples of valid string values as defined by the json grammar
 // Jedi Chou, 2016.3.7 20:25
 
+//absent of unicode
 console.log("");
 
-// random unicode charactesrs
-console.log("°∆");  
+//random unicode characters
+console.log("Œ£", "‚à¢");
 
-// use of escaped character to display double quotes
-console.log("\" \" "); 
+//use of escaped character to display double quotes;
+console.log(" \" \" ");
 
 //use of \u denotes a unicode value
-console.log("\u22A0"); // outputs
+console.log("\u22A0"); // outputs ‚ä†
 
 //a series of valid unicode as defined by the grammar
-console.log("\u22A0 \"°∆ \n");
+console.log("\u22A0 ‚ä† \" Œ£ \n");
