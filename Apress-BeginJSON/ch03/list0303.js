@@ -4,4 +4,4 @@
 var strObject = new String("test");
 console.log( strObject );
 for(var i in strObject)
-	console.log(i + ' ' + strObject[ch]);
+	console.log(i + ' ' + strObject[i]);
