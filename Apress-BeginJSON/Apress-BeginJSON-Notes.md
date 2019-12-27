@@ -54,3 +54,5 @@
 * Listing 1-26. Declaring Three Variables
 * Listing 1-27. The Syntax of the Function Declaration
 * Listing 1-28. Invoking the sayName Function with a Parameter
+
+## Chapter 2: Special Objects
