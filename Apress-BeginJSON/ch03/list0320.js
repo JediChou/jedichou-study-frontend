@@ -5,4 +5,3 @@ var strLiteral = 'hello world';
 console.log(strLiteral.toLowerCase());
 console.log(strLiteral.length);
 console.log(strLiteral.substr(0, 5));
-
