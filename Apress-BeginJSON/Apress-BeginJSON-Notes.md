@@ -118,3 +118,62 @@
 * this is used to maintain the scope of the property being accessed.
 
 ## Chapter 3: String Manipulation
+
+* Listing 3-1. Joining Strings
+* Listing 3-2. Formatting Data
+* Listing 3-3. Instantiating a String object
+* Listing 3-4. Obtaining a String’s Length
+* Listing 3-5. Obtaining Unicode Characters
+* Listing 3-6. Iterating Through a String’s Characters
+* Listing 3-7. Obtaining the First Location for a Substring
+* Listing 3-8. The Index of the First Matched Character ‘l’ is Returned
+* Listing 3-9. If the Index of -1 is Returned, the Substring is Not Present
+* Listing 3-10. The Index of the First Matched Substring is Returned
+* Listing 3-11. Locating the Index of the Last Matched Substring
+* Listing 3-12. Obtaining Matched Substrings
+* Listing 3-13. Replacing Matched Substrings
+* Listing 3-14. Extracting Substrings with slice
+* Listing 3-15. Extracting Substrings with substr
+* Listing 3-16. Separating a Comma-Delimited String
+* Listing 3-17. Capitalizing All Alphabetic Characters
+* Listing 3-18. Applying Lowercase to All Alphabetic Characters
+* Listing 3-19. Comparisons Are Case-Sensitive
+* Listing 3-20. Implicit Use of the String object
+
+### Key Points from Chapter 3
+
+* There is a corresponding object for each primitive type.
+* A data format refers to the way data is assembled.
+* The addition operator is used to capture application logic within a string.
+* The string primitive has pseudo members that can be accessed with access notation.
+* The behaviors of the string object can be used indirectly.
+* The HTTP protocol transmits text.
+* The comparison between strings does not ignore case.
+* Manipulating a string does not alter the original.
+
+## Chapter 4: Introducing JSON
+
+* Listing 4-1. Examples of Valid Representations of a Collection of Key/Value Pairs, per JSON Grammar
+* Listing 4-2. Examples of Valid Representations of an Ordered List, per JSON Grammar
+* Listing 4-3. Using the new Keyword to Instantiate an object and array
+* Listing 4-4. Creation of an object and an array via Literal Notation
+* Listing 4-5. Designing an object and array via Literal Notation with the Provision of Properties
+* Listing 4-6. Object Keys Can Be Defined Explicitly or Implicitly As Strings
+* Listing 4-7. The Very First JSON Message Used by Douglas Crockford
+* Listing 4-8. Examples of Valid String Values As Defined by the JSON Grammar
+* Listing 4-9. Valid Numerical Values
+* Listing 4-10. Examples of JSON Text Containing a Variety of Valid JSON Values
+
+### Key Points from Chapter 4
+
+* The array r • epresents an ordered list of values, whereas the object represents acollection of key/value pairs.
+* Unordered collections of key/value pairs are contained within the following opening ({) and closing (}) brace tokens.
+* Ordered lists are encapsulated within opening ([) and closing (]) square bracket tokens.
+* The key of a member must be contained in double quotes.
+* The key of a member and its possessed value must be separated by the colon (:) token.
+* Multiple values within an object or array must be separated by the comma (,) token.
+* Boolean values are represented using lowercase true/false literals.
+* Number values are represented using double-precision floating number point format.
+* Number values can be specified with scientific notation.
+* Control characters must be escaped via the reverse solidus (\) token.
+* Null values are represented as the literal: null.
