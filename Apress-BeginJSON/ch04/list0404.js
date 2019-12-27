@@ -5,3 +5,9 @@
 
 var objInstantion   = {};  // creation of an empty object
 var arrayInstantion = [];  // creation of an empty array
+
+//////////////////////////////
+let obj = objInstantion;
+let arr = arrayInstantion;
+console.log(obj, typeof obj, obj instanceof Object, obj instanceof Array);
+console.log(arr, typeof arr, arr instanceof Object, arr instanceof Array);
