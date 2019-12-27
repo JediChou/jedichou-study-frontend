@@ -7,4 +7,6 @@ var aBracketNotationCollectionA = new Object();
 	console.log(aBracketNotationCollectionA['1']);
 
 var aBracketNotationCollectionB = new Object();
-	aBracketNotationCollectionB.1 = "1";  // throws a SyntaxError
+	aBracketNotationCollectionB.1 = "1";  
+	// throws a SyntaxError
+	// SyntaxError: Unexpected number
