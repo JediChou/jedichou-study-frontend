@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="json2.js"></script>
+    </head>
+    <body>
+        <script>
+            // obtain a reference to the body tagg
+            var body = document.getElementsByTagName("body")[0];
+            
+            // function log will append a value to the body for output
+            function log(jsonText) {
+                // surround supplied jsonText with double quotes and append a new line
+                body.innerHTML += jsonText + '<br/>';
+            }
+            
+            log(JSON.stringify(false));
+            log(JSON.stringify(undefined));
+            log(JSON.stringify([undefined]));
+            log(JSON.stringify([undefined, false]));
+            log(JSON.stringify({property: undefined}));
+            log(JSON.stringify(new Date("Jan 1 2015")));
+            
+            var obj = new Object();
+                obj.name = "name-test";
+                obj.f = function() { return "function-test" };
+            
+            log('');
+            log(JSON.stringify(obj));
+            log(JSON.stringify("this example \u000A\u000D has control characters"));
+            log(JSON.stringify("true"));
+            log(JSON.stringify(1/0));
+            log(JSON.stringify(Infinity));
+            log(JSON.stringify([function(){ return "A"}]));
+            
+            var selfReference = new Array();
+                selfReference[0] = selfReference;
+            // because line will throw an error, we must wrap it with a try catch to view the error
+            try { JSON.stringify(selfReference)} catch(e) {log(e)}; 
+               
+        </script>
+    </body>
+</html>>
