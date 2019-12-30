@@ -177,3 +177,9 @@
 * Number values can be specified with scientific notation.
 * Control characters must be escaped via the reverse solidus (\) token.
 * Null values are represented as the literal: null.
+
+## Chapter 5: Creating JSON
+
+* Listing 5-1. Concatenating Primitive Values with Strings
+* Listing 5-2. Concatenating Non-Primitive Values with Strings
+* Listing 5-3. Converting an object and Its Property into an object literal
